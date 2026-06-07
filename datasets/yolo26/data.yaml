@@ -1,0 +1,13 @@
+﻿train: images/train
+val: images/val
+test: images/test
+
+nc: 1
+names: ['agave']
+
+roboflow:
+  workspace: raul-stlme
+  project: raul-stlme
+  version: dataset
+  license: Private
+  url: https://app.roboflow.com/raul-stlme/raul-stlme/dataset
