@@ -116,6 +116,26 @@ py -3.12 -m pipenv run python scripts/track_count_line.py `
   --show-conf
 ```
 
+## Raspberry Pi y Camara IP
+
+Se documento una ruta reproducible de investigacion para correr inferencia desde una camara IP Dahua hacia una Raspberry Pi 4:
+
+```text
+docs/rpi_camera_inference_repro.md
+docs/llm_handoff_rpi_camera.md
+scripts/rpi_rtsp_smoke_test.py
+```
+
+La guia cubre:
+
+- deteccion del stream RTSP de la camara
+- entorno compatible en Raspberry Pi usando `python3-torch` de Debian
+- prueba de inferencia con `yolo11n.pt`
+- captura de clips cortos desde RTSP
+- mediciones iniciales de rendimiento en CPU
+
+Para pruebas locales, copia `.env.example` a `.env` y completa los valores privados. No se deben versionar credenciales, pesos, videos ni datasets completos.
+
 ## Entrenamiento
 
 Las configuraciones probadas se encuentran en:
