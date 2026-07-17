@@ -1,0 +1,240 @@
+Reporte de avance de tesis
+Detección de maleza en cultivos de agave de temprana edad
+mediante redes neuronales convolucionales profundas
+1. Introducción general del proyecto
+El presente proyecto de tesis se enfoca en el desarrollo de un sistema de visión artificial basado en redes
+neuronales profundas para apoyar tareas de agricultura de precisión en cultivos de agave de edad
+temprana. El objetivo principal es desarrollar y validar un algoritmo capaz de detectar , a partir de imágenes
+RGB capturadas en campo, elementos de interés dentro del cultivo, principalmente agave y maleza, con la
+finalidad de generar información útil para un futuro sistema deshierbador agrícola.
+La problemática que motiva este trabajo surge de la competencia que la maleza genera en las primeras
+etapas de desarrollo del agave. Durante esta etapa, la planta es más vulnerable a la competencia por agua,
+luz y nutrientes, lo cual puede afectar su crecimiento, aumentar los costos de manejo y reducir el
+rendimiento del cultivo. En regiones semiáridas como Zacatecas, donde el recurso hídrico es limitado, el
+control oportuno de maleza resulta especialmente importante.
+Actualmente, el manejo de maleza en cultivos de agave se realiza principalmente mediante deshierbe
+manual, semimecanizado o aplicación de herbicidas. Estas estrategias pueden implicar altos costos,
+dependencia de mano de obra, posibles daños al cultivo y efectos ambientales no deseados. Por ello, el uso
+de sistemas de visión artificial e inteligencia artificial representa una alternativa tecnológica para avanzar
+hacia un manejo más preciso, selectivo y eficiente.
+En el protocolo de tesis se plantea el desarrollo de un modelo de detección basado en redes neuronales
+profundas, entrenado con imágenes RGB de campos de agave, con la intención de implementarlo
+posteriormente en una plataforma embebida, como una Raspberry Pi, y utilizar sus resultados para generar
+parámetros de activación hacia actuadores de un sistema deshierbador mecánico no invasivo.
+Durante el avance actual del proyecto, se ha trabajado principalmente en la etapa de visión computacional.
+En particular , se ha construido un flujo completo de detección de agaves utilizando modelos YOLO, desde la
+preparación del entorno y organización del conjunto de datos, hasta el entrenamiento, evaluación,
+selección del mejor modelo, inferencia en video, seguimiento de objetos y conteo mediante cruce de línea.
+Este avance representa una base importante para continuar posteriormente con la detección de maleza y la
+implementación embebida.
+2. Metodología propuesta en el protocolo
+La metodología planteada originalmente en el protocolo se divide en cuatro fases principales:
+1
+
+2.1 Adquisición y preparación de datos
+La primera fase consiste en capturar imágenes y videos RGB en una parcela de agave de edad temprana. La
+cámara debe colocarse en una posición similar a la que tendría en un sistema deshierbador , considerando
+altura, ángulo y orientación respecto al surco. A partir de los videos capturados se deben extraer frames
+representativos para construir una base de datos.
+Posteriormente, las imágenes deben ser etiquetadas manualmente en una plataforma como Roboflow,
+marcando las clases de interés, principalmente “agave” y “maleza”. Finalmente, el conjunto de datos debe
+dividirse en subconjuntos de entrenamiento, validación y prueba.
+2.2 Diseño, entrenamiento y validación del modelo
+La segunda fase contempla el entrenamiento de un modelo de detección de objetos basado en redes
+neuronales profundas. En el protocolo se propuso utilizar una arquitectura tipo YOLO por su capacidad para
+realizar detección en tiempo real y por su posibilidad de implementarse posteriormente en plataformas de
+bajo costo.
+Durante esta etapa se deben ajustar parámetros como tamaño de imagen, número de épocas, batch,
+optimizador y técnicas de aumento de datos. El desempeño del modelo debe evaluarse mediante métricas
+como precisión, recall y mAP , con el objetivo de seleccionar la versión que ofrezca el mejor equilibrio entre
+exactitud y complejidad computacional.
+2.3 Implementación del modelo en Raspberry Pi
+La tercera fase consiste en exportar el modelo entrenado a un formato compatible con una plataforma
+embebida, específicamente una Raspberry Pi conectada a una cámara RGB. En esta etapa se debe
+desarrollar un programa capaz de capturar imágenes en tiempo real, ejecutar la inferencia del modelo y
+obtener las detecciones en cada frame.
+También se contempla medir el desempeño del sistema en términos de velocidad de inferencia, FPS y
+latencia, con la finalidad de evaluar si el modelo puede operar en condiciones cercanas al tiempo real.
+2.4 Salida de datos hacia actuadores
+La cuarta fase corresponde al uso de las detecciones generadas por el modelo para producir parámetros
+útiles para el sistema deshierbador . Estos parámetros pueden incluir coordenadas, posición relativa de la
+maleza dentro del área de trabajo y señales lógicas de activación para actuadores.
+La comunicación entre la Raspberry Pi y el mecanismo deshierbador podría realizarse mediante GPIO, UART
+o comunicación serial, de manera que las detecciones del modelo puedan convertirse en acciones físicas
+sincronizadas con el movimiento del implemento agrícola.
+3. Cronograma propuesto
+El cronograma original del protocolo contempla actividades desde septiembre de 2025 hasta noviembre de
+2026. Las actividades se agrupan en las siguientes etapas generales:
+2
+
+Primero, se contempla la etapa de conceptualización, que incluye la revisión bibliográfica, estado del arte,
+definición de requerimientos del sistema y elaboración del protocolo. Esta etapa se desarrolla
+principalmente al inicio del proyecto, aunque la revisión bibliográfica se mantiene de forma continua
+durante gran parte del trabajo.
+Posteriormente, se plantea la generación de la base de datos, que incluye la toma de videos en campo y la
+extracción y etiquetado de imágenes mediante Roboflow. Esta etapa se ubica en los primeros meses de
+2026.
+Después, el cronograma considera el diseño y entrenamiento del modelo, incluyendo la configuración del
+entorno, pruebas preliminares, entrenamiento y ajuste del modelo YOLO. Esta fase se ubica después de la
+generación del conjunto de datos.
+La siguiente etapa corresponde a la implementación embebida y salida de parámetros. En esta fase se
+contempla implementar el modelo en Raspberry Pi, realizar pruebas de inferencia en tiempo real y diseñar
+el módulo de comunicación hacia actuadores.
+Finalmente, el cronograma incluye la validación del sistema de detección en campo, redacción de tesis,
+revisión, corrección y sustentación.
+4. Avance realizado con base en el cronograma
+Con base en el cronograma propuesto, el avance actual del proyecto se concentra principalmente en las
+etapas de generación de base de datos, configuración del entorno, entrenamiento del modelo, evaluación
+de resultados e inferencia sobre video.
+4.1 Conceptualización, revisión bibliográfica y protocolo
+La etapa de conceptualización se encuentra avanzada. Se elaboró el protocolo de tesis, donde se definieron
+el planteamiento del problema, justificación, hipótesis, objetivos, metas, metodología, cronograma,
+contribución, productos esperados, alcances y delimitaciones.
+También se integró una revisión bibliográfica enfocada en agricultura de precisión, visión artificial,
+detección de maleza mediante aprendizaje profundo, modelos YOLO, sistemas embebidos y aplicaciones en
+cultivos agrícolas. Esta etapa sirve como base teórica para justificar el desarrollo del sistema propuesto.
+Aunque esta fase ya cuenta con un avance considerable, la revisión bibliográfica deberá continuar durante
+el siguiente semestre para fortalecer el estado del arte y actualizar los antecedentes con trabajos recientes
+relacionados con detección de maleza, modelos ligeros y despliegue en plataformas embebidas.
+4.2 Generación y organización de la base de datos
+En relación con la generación de la base de datos, se ha avanzado en la organización de un conjunto de
+datos en formato YOLO. El dataset utilizado hasta el momento se estructuró con imágenes separadas en
+carpetas de entrenamiento, validación y prueba.
+3
+
+Actualmente, el conjunto de datos trabajado contiene una clase principal: agave. La distribución registrada
+es de 295 imágenes para entrenamiento, 73 imágenes para validación y 36 imágenes para prueba. Esta
+organización permitió iniciar el entrenamiento de modelos de detección y validar el flujo completo de
+trabajo.
+Aunque el protocolo contempla una base de datos multiclase agave/maleza, en esta etapa el avance se ha
+enfocado primero en la detección de agave. Esto ha permitido comprobar que el proceso de etiquetado,
+entrenamiento, validación e inferencia funciona correctamente. Como siguiente paso, será necesario
+ampliar o ajustar el conjunto de datos para incluir la clase maleza y poder cumplir plenamente con el
+objetivo original del proyecto.
+4.3 Configuración del entorno y pruebas preliminares
+Se realizó la preparación del entorno de trabajo local para entrenamiento de modelos YOLO. El proyecto fue
+organizado en un repositorio local y remoto, permitiendo llevar control del desarrollo mediante Git y
+GitHub.
+El entorno se configuró utilizando Python 3.12.9 mediante Pipenv, junto con librerías como Ultralytics,
+Roboflow, inference-sdk, PyTorch y Torchvision con soporte CUDA. También se verificó la disponibilidad de
+una GPU NVIDIA GeForce RTX 5050 Laptop GPU de 8 GB, lo que permitió acelerar los procesos de
+entrenamiento.
+Esta etapa corresponde directamente a la actividad de configuración del entorno y pruebas preliminares
+planteada en el cronograma. Se considera cumplida para la fase local de desarrollo, ya que se logró
+entrenar modelos YOLO utilizando la GPU del equipo.
+4.4 Entrenamiento y ajuste del modelo YOLO
+Una de las partes con mayor avance ha sido el entrenamiento y comparación de modelos YOLO. Se realizó
+una estrategia iterativa, comenzando con pruebas rápidas para validar que el modelo pudiera leer
+correctamente el dataset y entrenar con GPU.
+Posteriormente, se entrenaron diferentes configuraciones utilizando modelos base tipo YOLO, comparando
+variantes pequeñas y de mayor capacidad. Se modificaron parámetros de entrenamiento como número de
+épocas, optimizador , learning rate, aumentos de datos y pesos de pérdida.
+En total, se compararon once corridas de entrenamiento. Cada corrida fue evaluada mediante métricas
+como precisión, recall, mAP50 y mAP50-95. El mejor modelo seleccionado fue la corrida denominada
+yolo26s_sgd_cos_slow_120e, la cual utilizó como base yolo26s.pt, optimizador SGD, learning rate inicial de
+0.005, scheduler coseno, batch de 8 e imágenes de 640 píxeles.
+El mejor modelo obtuvo una precisión de 0.693, recall de 0.615, mAP50 de 0.654 y mAP50-95 de 0.213 en el
+conjunto de prueba. Estos resultados muestran que el modelo ya es capaz de detectar agaves en las
+imágenes evaluadas, aunque aún existe margen de mejora, principalmente en la reducción de falsos
+negativos y falsos positivos.
+4
+
+4.5 Evidencia visual y análisis de resultados
+Como parte de la evaluación, se generaron curvas de entrenamiento, métricas de desempeño, matriz de
+confusión y predicciones visuales sobre datos de validación. Estas evidencias permiten analizar el
+comportamiento del modelo durante el entrenamiento y observar de forma cualitativa los aciertos y errores
+en la detección.
+Las curvas muestran la evolución de las pérdidas de entrenamiento y validación, así como métricas como
+precisión, recall y mAP . También se generó una matriz de confusión explicativa, donde se observa el
+porcentaje de agaves detectados, agaves no detectados y falsas detecciones.
+Esta información será útil para el capítulo de resultados preliminares, ya que permite justificar la selección
+del mejor modelo y explicar el desempeño alcanzado hasta el momento.
+4.6 Inferencia en video, tracking y conteo
+Después de seleccionar el mejor modelo, se aplicó inferencia sobre un video de campo. Se trabajó con un
+segmento de video de 30 segundos, correspondiente al intervalo de 01:30 a 02:00.
+Sobre este video se aplicó el modelo entrenado y posteriormente se agregó un sistema de tracking
+mediante BoT-SORT. El objetivo del tracking fue asignar identificadores únicos a los agaves detectados y
+evitar que un mismo objeto fuera contado múltiples veces en diferentes frames.
+También se implementó una línea horizontal al 50% del frame para realizar conteo por cruce de línea,
+considerando únicamente los objetos que cruzaban en dirección hacia abajo. Con esta lógica, el resultado
+final fue de 41 agaves únicos contados en el segmento analizado.
+Este avance representa un resultado importante, ya que no solo se logró detectar agaves en imágenes, sino
+también aplicar el modelo en video, realizar seguimiento temporal y obtener una métrica operacional de
+conteo. Aunque esta parte no estaba planteada explícitamente como producto principal en el protocolo,
+fortalece el proyecto porque demuestra la posibilidad de analizar video capturado en condiciones reales de
+campo.
+5. Comparación entre cronograma y avance real
+De acuerdo con el cronograma original, las actividades de conceptualización, revisión bibliográfica,
+definición de requerimientos, toma de videos, extracción y etiquetado de imágenes, configuración del
+entorno y entrenamiento del modelo corresponden a las primeras etapas del proyecto.
+Hasta el momento, se puede considerar que la conceptualización y elaboración del protocolo están
+avanzadas. La generación de datos también presenta avance, aunque actualmente el dataset se ha
+enfocado principalmente en la clase agave. La configuración del entorno y las pruebas preliminares se
+encuentran realizadas, ya que se logró establecer un entorno funcional con Python, GPU, Ultralytics y
+PyTorch.
+La etapa de entrenamiento del modelo presenta un avance significativo, debido a que ya se realizaron
+múltiples corridas, se compararon métricas y se seleccionó un mejor modelo. Además, se desarrolló una
+5
+
+aplicación de inferencia en video con tracking y conteo, lo cual representa un avance adicional respecto a la
+detección básica en imágenes.
+Sin embargo, aún existen actividades pendientes para cumplir completamente con el cronograma y los
+objetivos del protocolo. Entre ellas se encuentran la integración de la clase maleza dentro del conjunto de
+datos, el entrenamiento de un modelo multiclase agave/maleza, la implementación del modelo en
+Raspberry Pi, las pruebas de inferencia en tiempo real en plataforma embebida, el diseño del módulo de
+salida de parámetros hacia actuadores y la validación del sistema en campo.
+6. Estado actual del proyecto
+Actualmente, el proyecto se encuentra en una etapa intermedia de desarrollo. Ya se cuenta con una base
+funcional de visión computacional que permite detectar agaves mediante YOLO, evaluar diferentes
+configuraciones de entrenamiento y aplicar el modelo sobre video.
+El principal logro hasta el momento es haber construido un flujo completo de trabajo que incluye
+preparación del entorno, organización del dataset, entrenamiento, evaluación, selección de modelo,
+inferencia en video, tracking y conteo. Esto demuestra que la metodología propuesta es viable desde el
+punto de vista computacional.
+No obstante, el proyecto aún debe avanzar hacia el objetivo central de detección de maleza en cultivos de
+agave. Para ello será necesario ampliar el conjunto de datos, incorporar etiquetas de maleza, entrenar un
+modelo multiclase y evaluar su desempeño en condiciones reales. También falta realizar la implementación
+en Raspberry Pi y generar las salidas necesarias para una futura comunicación con actuadores.
+7. Actividades propuestas para el próximo semestre
+Durante el próximo semestre se propone continuar el proyecto en las siguientes líneas de trabajo:
+En primer lugar , se deberá ampliar y depurar la base de datos. Esto incluye seleccionar más frames de los
+videos disponibles, capturar nuevo material si es necesario y realizar el etiquetado de las clases agave y
+maleza. La incorporación de la clase maleza es fundamental para alinear el desarrollo con el objetivo
+general de la tesis.
+En segundo lugar , se entrenará un modelo multiclase capaz de detectar tanto agave como maleza. Para ello
+se podrán utilizar los aprendizajes obtenidos en los entrenamientos previos, como la configuración del
+entorno, los parámetros de entrenamiento, las estrategias de aumento de datos y la comparación de
+métricas.
+En tercer lugar , se evaluará el desempeño del nuevo modelo mediante precisión, recall, mAP50 y mAP50-95,
+comparando distintas configuraciones hasta seleccionar el modelo más adecuado. También se analizarán
+visualmente las detecciones para identificar errores frecuentes, como confusión entre maleza y agave,
+detecciones duplicadas u objetos no detectados.
+En cuarto lugar , se trabajará en la exportación e implementación del modelo en una Raspberry Pi. Esta
+etapa implicará probar formatos optimizados, medir velocidad de inferencia, latencia y estabilidad del
+6
+
+sistema. Dependiendo del desempeño obtenido, se podrán realizar ajustes de resolución, modelo base o
+configuración de inferencia.
+En quinto lugar , se diseñará el módulo de salida de parámetros hacia actuadores. A partir de las
+coordenadas de detección se deberán generar señales o datos que indiquen la posición relativa de la
+maleza dentro del área de trabajo. Este módulo podrá comunicarse mediante GPIO, UART o comunicación
+serial, de acuerdo con las necesidades del sistema mecánico.
+Finalmente, se realizarán pruebas preliminares de validación en campo o con videos reales, con el objetivo
+de evaluar el comportamiento del sistema en condiciones más cercanas a su uso final. De manera paralela,
+se continuará con la redacción de la tesis, incorporando el marco teórico, metodología, avances
+experimentales, resultados preliminares y discusión.
+8. Conclusión del avance
+El avance realizado hasta el momento representa una base sólida para el desarrollo de la tesis. Se logró
+pasar de la formulación conceptual del proyecto a la implementación práctica de un flujo completo de
+detección con YOLO. El trabajo desarrollado permitió validar el entorno de entrenamiento, organizar un
+dataset, entrenar y comparar diferentes modelos, seleccionar una configuración con mejor desempeño y
+aplicar el modelo sobre video con tracking y conteo.
+Aunque el avance actual se ha enfocado principalmente en la detección de agave, este resultado es
+importante porque establece la estructura técnica necesaria para continuar con la detección de maleza. El
+siguiente reto será convertir el sistema en un modelo multiclase, implementarlo en una plataforma
+embebida y generar salidas útiles para el accionamiento de un sistema deshierbador .
+Con las actividades propuestas para el próximo semestre, se espera avanzar hacia el cumplimiento del
+objetivo general de la tesis: desarrollar y validar un algoritmo de detección basado en redes neuronales
+profundas que permita identificar maleza en plantíos de agave de edad temprana y apoyar el
+funcionamiento de un sistema de deshierbe mecánico no invasivo.
+7

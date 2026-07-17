@@ -4,7 +4,7 @@ Proyecto local para deteccion, inferencia, tracking y conteo de agaves con YOLO2
 
 ## Estado del Proyecto
 
-- Rama actual del commit: `master`
+- Rama actual del commit: `main`
 - Remoto configurado: `https://github.com/RaulVen/deteccion_agave.git`
 - Entorno: Pipenv con Python `3.12.9`
 - GPU validada: NVIDIA GeForce RTX 5050 Laptop GPU, CUDA disponible con PyTorch `2.10.0+cu128`
@@ -22,7 +22,7 @@ El mejor modelo hasta ahora es:
 runs/detect/agave_experiments/yolo26s_sgd_cos_slow_120e/weights/best.pt
 ```
 
-Este modelo quedaria documentado y preparado en la rama `master`. Si despues queremos publicar una rama separada para experimentos, una buena opcion seria `experiments/yolo26-agave`.
+Este modelo queda documentado y preparado en la rama `main`. Si despues queremos publicar una rama separada para experimentos, una buena opcion seria `experiments/yolo26-agave`.
 
 Metricas principales en test:
 
@@ -73,6 +73,21 @@ Matriz de confusion:
 Predicciones de validacion:
 
 ![Predicciones de validacion](docs/results/best_yolo26s_val_predictions.jpg)
+
+Captura final de tracking y conteo:
+
+![Tracking final](docs/results/final_tracking_video_frame.jpg)
+
+## Reportes de Tesis
+
+Se agregaron reportes Word reproducibles generados desde `scripts/` y basados en el modelo ganador `yolo26s_sgd_cos_slow_120e`:
+
+- `docs/Reporte_avance_tesis_deteccion_agave_yolo.docx`
+- `docs/Reporte_tesis_proceso_completo_agave.docx`
+- `docs/Reporte_especifico_modelo_agave.docx`
+- `docs/Reporte_optimizadores_lr_aumentacion_agave.docx`
+
+Tambien se agregaron figuras explicativas en `docs/results/` sobre aumentacion de datos, arquitectura/metricas del modelo, matriz de confusion legible, accuracy operacional y tracking final.
 
 ## Tracking y Conteo
 
