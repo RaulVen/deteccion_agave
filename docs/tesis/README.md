@@ -4,8 +4,12 @@ Esta es la carpeta de trabajo para redactar desde cualquiera de las dos computad
 
 ## Por dónde continuar
 
+Si vienes de la otra computadora o abres un chat nuevo, empieza por [el contexto del chat de redacción](CONTEXTO_CHAT_REDACCION.md). Resume las decisiones, el estilo solicitado y el estado de cada versión.
+
 | Archivo o carpeta | Uso |
 |---|---|
+| [Capítulo 1 del autor](insumos_usuario/Tesis_Lumat_Cap1.pdf) | PDF que se revisó el 27 de octubre; referencia del texto y tono del autor |
+| [Protocolo original](insumos_usuario/Protocolo_lumat.pdf) | Antecedente de estructura y referencias; su enfoque anterior debe interpretarse según el contexto del chat |
 | [Capítulo 2 ampliado](Capitulo_2_Marco_teorico_ampliado.md) | Borrador más reciente del capítulo 2, actualizado el 28 de octubre de 2026; empezar aquí para continuar este capítulo |
 | [PDF del capítulo 2 ampliado](Capitulo_2_Marco_teorico_ampliado.pdf) | Exportación existente de ese borrador |
 | [Capítulo 1 y marco teórico](Capitulo_1_y_marco_teorico_agave.md) | Borrador previo del 5 de octubre; incluye una versión anterior del capítulo 2 |
