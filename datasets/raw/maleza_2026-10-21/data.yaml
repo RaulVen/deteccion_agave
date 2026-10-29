@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['agave']
+
+roboflow:
+  workspace: raul-stlme
+  project: agave-maleza
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/raul-stlme/agave-maleza/dataset/1

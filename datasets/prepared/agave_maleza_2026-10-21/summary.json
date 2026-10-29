@@ -1,0 +1,57 @@
+{
+  "version": "agave_maleza_2026-10-21",
+  "total_images_preserved": 2230,
+  "active_images": 2064,
+  "total_boxes": 14551,
+  "splits": {
+    "train": {
+      "images": 1493,
+      "boxes": 9529,
+      "empty_labels": 38,
+      "by_source": {
+        "historico_404": 295,
+        "maleza_1826": 1198
+      }
+    },
+    "val": {
+      "images": 435,
+      "boxes": 2967,
+      "empty_labels": 9,
+      "by_source": {
+        "historico_404": 73,
+        "maleza_1826": 362
+      }
+    },
+    "test": {
+      "images": 136,
+      "boxes": 1115,
+      "empty_labels": 0,
+      "by_source": {
+        "historico_404": 36,
+        "maleza_1826": 100
+      }
+    },
+    "reserve": {
+      "images": 166,
+      "boxes": 940,
+      "empty_labels": 0,
+      "by_source": {
+        "maleza_1826": 166
+      }
+    }
+  },
+  "dimensions": {
+    "2880x1620": 2230
+  },
+  "exact_pixel_duplicate_groups": [],
+  "source_zip_sha256": "a6a301a5fbc3c661022788fe84dfa7aab894f779818b7a84676d1c68fea27679",
+  "source_zip_duplicate_data_yaml_entries": 3,
+  "limitations": [
+    "Los videos nuevos pertenecen a una misma salida de campo; la separacion temporal reduce cercania pero no descarta plantas o zonas revisadas nuevamente.",
+    "La evaluacion representa desempeno interno de esta salida, no generalizacion a otros campos, fechas o camaras.",
+    "Se conserva la particion historica por compatibilidad; su posible correlacion entre fotogramas no se corrige retrospectivamente.",
+    "Los resultados nuevos no son directamente comparables con el CSV historico porque cambia el conjunto de evaluacion. Reevaluar los pesos antiguos sobre el mismo nuevo holdout para comparar.",
+    "Solo se integran las 1826 imagenes etiquetadas exportadas; las imagenes extraidas que no aparecen en el ZIP no se consideran negativos ni se autoetiquetan."
+  ],
+  "validation": "All images decoded; labels checked; originals copied byte-for-byte; no resize/augmentation."
+}

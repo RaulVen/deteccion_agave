@@ -12,7 +12,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs" / "Reporte_especifico_modelo_agave.docx"
+OUT = ROOT / "docs" / "reportes" / "Reporte_especifico_modelo_agave.docx"
 RESULTS = ROOT / "docs" / "results"
 RUN = ROOT / "runs" / "detect" / "agave_experiments" / "yolo26s_sgd_cos_slow_120e"
 

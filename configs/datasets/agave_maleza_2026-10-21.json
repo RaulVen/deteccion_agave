@@ -1,0 +1,31 @@
+{
+  "name": "agave_maleza_2026-10-21",
+  "date": "2026-10-21",
+  "class_mapping": {"0": "agave"},
+  "historical_split": "Preservar exactamente los 295/73/36 usados por el benchmark anterior.",
+  "new_split": "Bloques de clips completos, con guardas de 60 segundos en ambas partes de cada frontera train/val/test.",
+  "fps_for_nominal_time": 15,
+  "video_splits": {
+    "v02": "train", "v03": "train", "v04": "train", "v05": "train", "v06": "train", "v07": "train",
+    "v08": "val", "v09": "val", "v10": "val",
+    "v11": "train", "v12": "train", "v13": "train", "v14": "train", "v15": "train", "v16": "train",
+    "v17": "test", "v18": "test", "v19": "test"
+  },
+  "reserve_ranges_seconds": {
+    "v07": [[240, null]],
+    "v08": [[0, 60]],
+    "v10": [[239.93333333333334, null]],
+    "v11": [[0, 60]],
+    "v16": [[239.93333333333334, null]],
+    "v17": [[0, 60]]
+  },
+  "guard_definition": "Colas: frame_index >= decoded_frames - 900; inicios: frame_index < 900. v07 tiene 4500 frames; v10/v16 tienen 4499. Se preservan todos los fotogramas de guarda en reserve sin usarlos para entrenar o evaluar.",
+  "grouping_rationale": "v02-v07 se mantienen juntos por continuidad visual; v12-v16 se mantienen juntos por las tomas con relojes solapados de v13/v14 y la continuidad de v15. Los bloques de val v08-v10 y test v17-v19 son tramos reservados, no campos independientes.",
+  "limitations": [
+    "Los videos nuevos pertenecen a una misma salida de campo; la separacion temporal reduce cercania pero no descarta plantas o zonas revisadas nuevamente.",
+    "La evaluacion representa desempeno interno de esta salida, no generalizacion a otros campos, fechas o camaras.",
+    "Se conserva la particion historica por compatibilidad; su posible correlacion entre fotogramas no se corrige retrospectivamente.",
+    "Los resultados nuevos no son directamente comparables con el CSV historico porque cambia el conjunto de evaluacion. Reevaluar los pesos antiguos sobre el mismo nuevo holdout para comparar.",
+    "Solo se integran las 1826 imagenes etiquetadas exportadas; las imagenes extraidas que no aparecen en el ZIP no se consideran negativos ni se autoetiquetan."
+  ]
+}

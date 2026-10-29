@@ -1,0 +1,1 @@
+bioiot ALL=(root) NOPASSWD: /usr/local/sbin/agave-field-network ""

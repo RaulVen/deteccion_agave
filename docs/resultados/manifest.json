@@ -1,0 +1,582 @@
+{
+  "snapshot_date": "2026-10-28",
+  "description": "Copias exactas de evidencia ligera para consultar y redactar desde otra computadora; no son una nueva evaluacion.",
+  "files": [
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/args.yaml",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/args.yaml",
+      "bytes": 2029,
+      "sha256": "30ea318d672c4a023b5c6b81a3552695ee10acebbb523ca3929f6aa5a181b396"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/results.csv",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/results.csv",
+      "bytes": 18872,
+      "sha256": "bed171cee1e2841e38b0fed804393029b5fb9149d7bc88c8841e7a16d88aad84"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/results.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/results.png",
+      "bytes": 274038,
+      "sha256": "f56b543b1f9b12c47584c3e107429c33802309b4c8d97cb3be270f29837f1df5"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/BoxF1_curve.png",
+      "bytes": 100358,
+      "sha256": "e13ab0cffdcde31c82b20fa360891693a942fd9a08c7a3b408a33dd127c87c99"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/BoxPR_curve.png",
+      "bytes": 88419,
+      "sha256": "d8931f99de016cb390b0b118226291a2a2a6fd245e2caf2e0f7ba2851c3b1b5e"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/BoxP_curve.png",
+      "bytes": 91228,
+      "sha256": "c54164792f99280e122151866a50e6f5fc6c14b4e81eced1d5b257702de1318e"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/BoxR_curve.png",
+      "bytes": 96740,
+      "sha256": "5b2cc22ec19b6fb047ad321b6dc46fca8f14e2be111cb4fba624dd7656d26c66"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/confusion_matrix.png",
+      "bytes": 94315,
+      "sha256": "8084a0b1801b879e88baa50b2a3624ed02776417757c9e63465375ae72d73865"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/val/confusion_matrix_normalized.png",
+      "bytes": 94445,
+      "sha256": "23e5591374cb324baab7b4c6876bdaefa7474d09661bca47430c4a1040ab0103"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/BoxF1_curve.png",
+      "bytes": 96625,
+      "sha256": "1597ae6599e4c1e83ddafe7041846497461b82ada8d92fd69a7d582a221bd05e"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/BoxPR_curve.png",
+      "bytes": 90274,
+      "sha256": "bf029ee0eedade648a1e6f3a99ac45abee684aad436e1314652eb3aec24f4e69"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/BoxP_curve.png",
+      "bytes": 96867,
+      "sha256": "3146c28bbbdcf90e2534fb555afa6feda68ec905504aae311057ba6569565b85"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/BoxR_curve.png",
+      "bytes": 94737,
+      "sha256": "ceeee95a8d432ea08545830ae2e4cc058198dd8206ec64a901a3ea0f9a13f42b"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/confusion_matrix.png",
+      "bytes": 96871,
+      "sha256": "9abda1d9f02b973c962fca20f2ba531ed3dc3370d7b359338cd87d52e2b44bcc"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26s_sgd_640_150e/evaluation/test/confusion_matrix_normalized.png",
+      "bytes": 94196,
+      "sha256": "6b25114395fc1439ab27da5bf015c0ee2835fbc6dcf8893744b3a5f923261bd0"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/args.yaml",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/args.yaml",
+      "bytes": 2034,
+      "sha256": "ac429bc62f5343d99b9b3ba39a09edac2398441bf720da2bef5779b747c46788"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/results.csv",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/results.csv",
+      "bytes": 18241,
+      "sha256": "d1f9dc5a0fc142a4ded291f5e6c0b0e05d90195383d6fc280783e6932c908026"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/results.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/results.png",
+      "bytes": 306539,
+      "sha256": "4ed3c0078f313774c239dcc4a5139eae75177bf222740ce2b7b9230e8a11b8dd"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/BoxF1_curve.png",
+      "bytes": 101024,
+      "sha256": "d5c81768af14822a51d75f585a0be9576bf8efd3038641c367251082acd868de"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/BoxPR_curve.png",
+      "bytes": 88579,
+      "sha256": "1bb16554ed92c6481a71b8533ed423840c6cef96313d047bbd5929101551cdb2"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/BoxP_curve.png",
+      "bytes": 90749,
+      "sha256": "e9bebcf320590321520947abafc0ba2e96bf13d0bafab1d4f13e0ae081d3b587"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/BoxR_curve.png",
+      "bytes": 96125,
+      "sha256": "346f8b60e047616664ec49ef1753477553d4763b1354ea923c210a25f162f58b"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/confusion_matrix.png",
+      "bytes": 92759,
+      "sha256": "c9e40dad13639809e3900cacc2a1889ecd855bb8296f879a69e34d671adeaf3b"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/val/confusion_matrix_normalized.png",
+      "bytes": 94553,
+      "sha256": "ef67b4f484b85f50829adbe7cf0d4083b7b8ff72ebf9ff87d6d4e1f4daa8b62b"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/BoxF1_curve.png",
+      "bytes": 94309,
+      "sha256": "bea6dd6d564de1d34e420de17e9f1f596fd3f04449719f8d21b80c45180812ae"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/BoxPR_curve.png",
+      "bytes": 90286,
+      "sha256": "4bbb1eb06de2db875d8348908971ab1f39cfe3f445421af7bd009fe4f810d0b2"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/BoxP_curve.png",
+      "bytes": 94522,
+      "sha256": "0e0b5560c349a9714abd1f9ddc164d63b6be5bbc346ed385fe41ec3981f0fc21"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/BoxR_curve.png",
+      "bytes": 94956,
+      "sha256": "7b4b6ce41827991b718af78252cc507a5798dc5eb8b50f9850aa8a6958bcbd6c"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/confusion_matrix.png",
+      "bytes": 97573,
+      "sha256": "3a2675e77b0aa2e82b1b89341054f9d0f87419da99ab5ba7dc393e1749a7e6c7"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_2026-10-21/yolo26n_campo_640_150e/evaluation/test/confusion_matrix_normalized.png",
+      "bytes": 94292,
+      "sha256": "71a1ffad7a89b1bb50fc3714c19129b339a71482a4c2c1d8c53b1cb52c66907b"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/args.yaml",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/args.yaml",
+      "bytes": 2051,
+      "sha256": "fc719a876ca0d2f8c7a60c47d73f02bc370c0ed0c0d7166f86d26e09af81818c"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/results.csv",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/results.csv",
+      "bytes": 18843,
+      "sha256": "30cc34f57af601f76db8d85d494c126dbf0a62d0d83b6110f16ac046d4b5f9d8"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/results.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/results.png",
+      "bytes": 263703,
+      "sha256": "bf32f8c98412adafe780bf4bb570c4fe06f1fc09497159bb37718870057051ac"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/BoxF1_curve.png",
+      "bytes": 96937,
+      "sha256": "8f7531f1d3aa3234ffd02cf2f1e4ed26cadafad7c4d4c22ed1149cf687793198"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/BoxPR_curve.png",
+      "bytes": 89634,
+      "sha256": "c7b5b8aae2578919345ccb876b75c37d6f611b331b747246c9374b15cca7802e"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/BoxP_curve.png",
+      "bytes": 89058,
+      "sha256": "8d63329fdde1f7698e6ff68a3639d6972fa988646ba9a30454943c63fd79975a"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/BoxR_curve.png",
+      "bytes": 94123,
+      "sha256": "c364356d5c024dd4e4fcc273d71ffd915aefc9b8ee2051ba7388a38c6610b412"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/confusion_matrix.png",
+      "bytes": 99652,
+      "sha256": "9025c7f989893ece9594f5aeb255bb8394e53c1ecac38c059c316172b5b6f0aa"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/val/confusion_matrix_normalized.png",
+      "bytes": 95065,
+      "sha256": "d8618ce059e07e6848f5c07167fe7953f8411e59d114b1c26d1f9c97e01a4837"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/BoxF1_curve.png",
+      "bytes": 90413,
+      "sha256": "d2926693c96c87017ebf8bce4cfcba96fc0c7a3bd7651809e371a41719c65c3d"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/BoxPR_curve.png",
+      "bytes": 86649,
+      "sha256": "c074654f7b4f24d55071967b34e69394e66dae4d68e7fbb847ded69626cc217e"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/BoxP_curve.png",
+      "bytes": 93203,
+      "sha256": "d80e22e9aa764f98a1e15cb39986742562c2f8cc1161ddcf53cd6c537184c8b7"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/BoxR_curve.png",
+      "bytes": 88758,
+      "sha256": "ffb24c741b8ddea59532c76f1e93a2d4b088ddd014b8816bb7d56fa864c8f553"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/confusion_matrix.png",
+      "bytes": 97833,
+      "sha256": "16870a138ba9f4f48bb2b1d6c1476e1118fa9ccae71a8f65b2bf3d1fa4843a44"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_960_150e/evaluation/test/confusion_matrix_normalized.png",
+      "bytes": 95099,
+      "sha256": "2e1dd3d8664db53583707759f794f20a2b80afb060f1cdfb5cc6a3a535f17951"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/args.yaml",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/args.yaml",
+      "bytes": 2061,
+      "sha256": "6900dadb7790752ce5688cdbe86861be59b3d1eb2eb9640c7f1f263bb7b5ba59"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/results.csv",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/results.csv",
+      "bytes": 18878,
+      "sha256": "5d4dced1a4c8bc7f075583ccaf093353af054796965e8d6f8823adbdcd71c088"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/results.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/results.png",
+      "bytes": 253952,
+      "sha256": "4ebf57911b8accb92b45f3c1cbfa2da6e5da58a5049765b2f27e422b66d7d990"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/BoxF1_curve.png",
+      "bytes": 101645,
+      "sha256": "6bfcc444f1d1806b17405c3771004b5fa1324b39738893f4a7ab633614fab1a7"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/BoxPR_curve.png",
+      "bytes": 89324,
+      "sha256": "2f6b955778763b0cc98e7abf7b0b0cccc7e26d6d684d7e1c1b881b01dda297a2"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/BoxP_curve.png",
+      "bytes": 92091,
+      "sha256": "a514b9fb49e3d1be6601e5c22065eeaea4098baed7e2c3f04e4be9c8c1bb83ef"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/BoxR_curve.png",
+      "bytes": 96775,
+      "sha256": "57ea2c4bf602c809dcd2d3dd6a2cba5e9f3ac88a9bc516d4fffd9d7768ccfaa2"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/confusion_matrix.png",
+      "bytes": 94163,
+      "sha256": "46bcd69a085d63bae84b852cc609c5ca73087c23136ce7d62691052a591008be"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/val/confusion_matrix_normalized.png",
+      "bytes": 94525,
+      "sha256": "b8f3d3e54769139bd296b18dc70e6fcdf2d56f1fd8ff8c91707a035bf761f58d"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/BoxF1_curve.png",
+      "bytes": 99020,
+      "sha256": "00fca425a8f69b62c6c3900781dd39d5a429119d4560596c4235e8aa2c73b167"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/BoxPR_curve.png",
+      "bytes": 91271,
+      "sha256": "73c9832f803b6e10045aa1155d725ff8d39d1417d54fd67ff2cdf85018f329de"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/BoxP_curve.png",
+      "bytes": 96758,
+      "sha256": "f8f59fdf1948e80a3b191f5d07aeb2a179f7eebb68fd6dd49eedd0deb8519769"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/BoxR_curve.png",
+      "bytes": 97245,
+      "sha256": "76479709d71d71458b6d30da891c6ebc01854faad02efe2e6afbbe9ca1d95805"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/confusion_matrix.png",
+      "bytes": 97960,
+      "sha256": "078e48823e49ba79095d665ccd1fc077f76eafa1a31ccf714c7069b4ac402fe3"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/yolo26s_sgd_box9_640_150e/evaluation/test/confusion_matrix_normalized.png",
+      "bytes": 95387,
+      "sha256": "fde24cac6887cc72f74aff1746152da49ac2a173c45de3d1da8abba6f7a8bd55"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/BoxF1_curve.png",
+      "bytes": 99107,
+      "sha256": "97fc3c9f8e67e365568718610ff74542e48fbf3696ecfe591ce2c0960356185b"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/BoxPR_curve.png",
+      "bytes": 89463,
+      "sha256": "55f21fda75561b427da3695c0e38e06ef898e66c93c45667fa35a15815b9de86"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/BoxP_curve.png",
+      "bytes": 95399,
+      "sha256": "2d845e010bee1879d0ac74919d1add82967dc83c88f8ac502153425fcd873982"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/BoxR_curve.png",
+      "bytes": 94504,
+      "sha256": "4cb0657d18d4c6d34642737b0421253bf78c44b59cd158aa48962f1e09198063"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/confusion_matrix.png",
+      "bytes": 103993,
+      "sha256": "828ee8e5b2b53ef26a17b5f847fd16f8fd545087194dfacf69da69b81554d860"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/val/confusion_matrix_normalized.png",
+      "bytes": 94624,
+      "sha256": "fbea6a1fc866586aaa371f5245f5656a37703be44aff6eddc333e3114ca34491"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/BoxF1_curve.png",
+      "bytes": 98366,
+      "sha256": "ac2f9d928a4ace0a09d0f256becfa1f277bf49b38231e0072481910e3bc38c78"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/BoxPR_curve.png",
+      "bytes": 90607,
+      "sha256": "6969e004001b6d42ac7870e15d03579048e8e833ffee56e37b8c1c092d229580"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/BoxP_curve.png",
+      "bytes": 98085,
+      "sha256": "ee237f2f62590756e9903b47b4543acde8bb941bb79dfd51e54bdfde3a07b650"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/BoxR_curve.png",
+      "bytes": 95804,
+      "sha256": "6ff105ae6349121ced7168efadcd2f18b50bba1355a746979926d5bb47450d1f"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/confusion_matrix.png",
+      "bytes": 99322,
+      "sha256": "0534b108283295cb763f08428f61a9541f9096631b68b21616951408da94be21"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/control640_at960/test/confusion_matrix_normalized.png",
+      "bytes": 94978,
+      "sha256": "a15beb7c0391834d9b027417aa497811c61b3bfece0387284040bf13306192f9"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/BoxF1_curve.png",
+      "bytes": 98600,
+      "sha256": "e93722d324eaf9e1c045d0473513190792fbf12a008899cb94ccb4ae75e8ad31"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/BoxPR_curve.png",
+      "bytes": 87767,
+      "sha256": "f13a066973eaf0072768aeba4d5b62342dd25830a7d8a976ece17db35b8c1f74"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/BoxP_curve.png",
+      "bytes": 89354,
+      "sha256": "2d32999d428206c3968f8c8c1bbc3af430148ed9064f31668e1fe0b162e41792"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/BoxR_curve.png",
+      "bytes": 94543,
+      "sha256": "b984b5a952b027e6a52a7882427978c1dbbb3e4799261d2f040aec9f580a9b5b"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/confusion_matrix.png",
+      "bytes": 94447,
+      "sha256": "e475b398a1a4e29d769fd1453769dfeecf013899977855b6723e596e548ca4f7"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/val/confusion_matrix_normalized.png",
+      "bytes": 94434,
+      "sha256": "86c8374adf431095c4d5f7f92c39d76b8f4e2658feaa0f050f2b5bd4fbfa84e3"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/BoxF1_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/BoxF1_curve.png",
+      "bytes": 94179,
+      "sha256": "257b13dc1d0cdb22dd42399fc99ad6d593ce14a8495817f1f9eac17a28632bd9"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/BoxPR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/BoxPR_curve.png",
+      "bytes": 88156,
+      "sha256": "8a09fdd7d0d82d3a0c4f41eba32130a7a006c194041deebef2a92460f081889c"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/BoxP_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/BoxP_curve.png",
+      "bytes": 96475,
+      "sha256": "5bdadad6f99e842ab53dabadb792121978c328a09af0e9c7259bc7d96ca12479"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/BoxR_curve.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/BoxR_curve.png",
+      "bytes": 92123,
+      "sha256": "f894175d1a8e954021a3b84a430170fa06bd4fc92e204c95b2dbb35b9124403a"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/confusion_matrix.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/confusion_matrix.png",
+      "bytes": 92858,
+      "sha256": "fa4c6814bac2763b04d55345afbb94e333c1f242f9c09361cf6fe149ca2c70f4"
+    },
+    {
+      "source": "runs/detect/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/confusion_matrix_normalized.png",
+      "snapshot": "docs/resultados/agave_maleza_150ep_opciones34_2026-10-22/cross_resolution_evaluation/new960_at960/test/confusion_matrix_normalized.png",
+      "bytes": 93875,
+      "sha256": "99eda5d17697bd587115896d31baef30cd102dea2b879a6d172205dde1a3c53d"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/LEEME.md",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/LEEME.md",
+      "bytes": 3323,
+      "sha256": "657d8f3441e24511ee3dac822cbe92e815b8aed2a428d8e567adeeabbadfc521"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/verificacion.json",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/verificacion.json",
+      "bytes": 663,
+      "sha256": "dbf59e25a18d1cb5d8a4a127d46e741a6d7af3960ff6719fa4c602f83f4f76dc"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/anterior_0100_0136/cruces.csv",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/anterior_0100_0136/cruces.csv",
+      "bytes": 7181,
+      "sha256": "449fcdef8eafafd537c821e44d40965aa66ae4643671fa2d6f437eca571796df"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/anterior_0100_0136/cruces.json",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/anterior_0100_0136/cruces.json",
+      "bytes": 20201,
+      "sha256": "b9a7392430627921709f33f7ed4c9bb264c29b29f5fee7e4c3a7ce8c717a90ac"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/anterior_0100_0136/inferencia.json",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/anterior_0100_0136/inferencia.json",
+      "bytes": 2833,
+      "sha256": "8a1e7d316534c7f2d48f50397452a88daa8a54d45eec2069897448f0305c5d20"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/anterior_0100_0136/predicciones.jsonl",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/anterior_0100_0136/predicciones.jsonl",
+      "bytes": 383973,
+      "sha256": "237a5a97cc19b3df2b7325b71f489a7e2fec5b0b428feafe48cc4cc598a96f37"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/anterior_0100_0136/resumen_final.jpg",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/anterior_0100_0136/resumen_final.jpg",
+      "bytes": 504232,
+      "sha256": "4ec6ea83cae62d04b07549f96e9d057d20150491e5294442cc84937da49bbd30"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/nuevo_0102_0320/cruces.csv",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/nuevo_0102_0320/cruces.csv",
+      "bytes": 28305,
+      "sha256": "9d83d5922a1a779520aa127932b20f827dc484c1a3e968de24aedce04a183842"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/nuevo_0102_0320/cruces.json",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/nuevo_0102_0320/cruces.json",
+      "bytes": 80637,
+      "sha256": "f2fecc2b63d5cf0bad51778e0ed1034ec8279d650e448f4d95df6dd7ddd9ebdb"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/nuevo_0102_0320/inferencia.json",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/nuevo_0102_0320/inferencia.json",
+      "bytes": 2838,
+      "sha256": "b7dcd14d9d938fcfeae6099b24d28f6182092afb6c7649f4921d6337827b86f0"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/nuevo_0102_0320/predicciones.jsonl",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/nuevo_0102_0320/predicciones.jsonl",
+      "bytes": 1321785,
+      "sha256": "cb26d16e426b7fa50fd24336b3ea91c1485ba7b5fba1215a0d2f834f4973cb57"
+    },
+    {
+      "source": "video_predictions/conteo_maleza_2026-10-26/nuevo_0102_0320/resumen_final.jpg",
+      "snapshot": "docs/resultados/conteo_maleza_2026-10-26/nuevo_0102_0320/resumen_final.jpg",
+      "bytes": 422170,
+      "sha256": "8415df3138487b84a7a777bf397d2d8f678bfd15b3edb6ce283baadb3ca01317"
+    }
+  ]
+}

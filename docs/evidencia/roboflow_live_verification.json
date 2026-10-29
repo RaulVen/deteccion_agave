@@ -1,0 +1,110 @@
+{
+  "workspace": "raul-stlme",
+  "project": "agave-vty65",
+  "source_url": "https://app.roboflow.com/raul-stlme/agave-vty65/dataset",
+  "verified": true,
+  "project_summary": {
+    "id": "raul-stlme/agave-vty65",
+    "type": "object-detection",
+    "name": "agave",
+    "images": 404,
+    "unannotated": -59,
+    "annotation": "agave",
+    "splits": {
+      "valid": 73,
+      "test": 36,
+      "train": 295
+    },
+    "classes": {
+      "agave": 4374
+    },
+    "public": true,
+    "versions": 1
+  },
+  "version_summary": {
+    "project_preprocessing": {
+      "resize": {
+        "height": 640,
+        "width": 640,
+        "format": "Stretch to"
+      },
+      "contrast": {
+        "type": "Contrast Stretching"
+      },
+      "auto-orient": true
+    },
+    "project_augmentation": {
+      "ninety": {
+        "counter-clockwise": false,
+        "clockwise": false,
+        "upside-down": false
+      },
+      "image": {
+        "versions": 2
+      },
+      "flip": {
+        "horizontal": true,
+        "vertical": false
+      }
+    },
+    "version": {
+      "id": "raul-stlme/agave-vty65/1",
+      "name": "2026-05-30 7:12pm",
+      "images": 699,
+      "splits": {
+        "valid": 73,
+        "test": 36,
+        "train": 590
+      },
+      "preprocessing": {
+        "contrast": {
+          "type": "Contrast Stretching"
+        },
+        "auto-orient": true,
+        "resize": {
+          "format": "Stretch to",
+          "height": 640,
+          "width": 640
+        }
+      },
+      "augmentation": {
+        "ninety": {
+          "upside-down": false,
+          "counter-clockwise": false,
+          "clockwise": false
+        },
+        "image": {
+          "versions": 2
+        },
+        "flip": {
+          "horizontal": true,
+          "vertical": false
+        }
+      },
+      "model": {
+        "id": "agave-vty65/1",
+        "endpoint": "https://serverless.roboflow.com/agave-vty65/1",
+        "start": 1780190206.837,
+        "end": 1780190944.678,
+        "fromScratch": true,
+        "tfjs": true,
+        "oak": true,
+        "map": "66.20",
+        "recall": "60.71",
+        "precision": "64.47"
+      }
+    }
+  },
+  "search_summary": {
+    "returned_records": 404,
+    "split_counts_returned": {
+      "valid": 73,
+      "test": 36,
+      "train": 295
+    },
+    "annotation_count_returned": 4373,
+    "classes_returned": {
+      "agave": 4373
+    }
+  }
+}

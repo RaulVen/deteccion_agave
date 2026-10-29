@@ -1,0 +1,36 @@
+{
+  "dataset_yaml_accepted_by_ultralytics": true,
+  "sample_images": 2,
+  "sample_batch_shape": [
+    2,
+    3,
+    640,
+    640
+  ],
+  "sample_classes": [
+    0
+  ],
+  "gpu_forward_completed": true,
+  "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "model": "models/pretrained/yolo26n.pt",
+  "training_executed": false,
+  "scope": "Lectura de datos y paso de inferencia de pesos base; no es evaluacion del detector de agave.",
+  "duplicate_train_reserve_val_regression": "passed",
+  "data_yaml_sha256": "d5c48a1c478140bf8928b6f360f22cecee6bdf63bae60870b22ac455f2550328",
+  "preflight_full_imports": "passed_after_initial_windows_block",
+  "initial_windows_block": {
+    "component": "matplotlib/ft2font.cp312-win_amd64.pyd",
+    "version": "3.10.9",
+    "event_ids": [
+      3033,
+      3077,
+      3089,
+      3118
+    ],
+    "module_sha256": "273e19127f89fc316b68caf870e766fe17a6873d2b873d1ca6c8d2fd6b3bd9d4",
+    "official_pypi_wheel_and_lock_match": true,
+    "subsequent_full_import_and_gpu_inference": "passed",
+    "environment_or_security_policy_modified": false,
+    "note": "Bloqueo observado una vez. Las comprobaciones posteriores pasaron; no se afirma reparacion permanente."
+  }
+}

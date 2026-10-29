@@ -1,5 +1,6 @@
 # Python / Pipenv
 .venv/
+.venv-redaccion/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -39,3 +40,42 @@ video_predictions/
 Thumbs.db
 .vscode/
 .idea/
+
+# Copias locales de seguridad y caches del dataset
+backups/
+*.cache
+
+# Logs de entrenamiento y bloqueos transitorios
+benchmark/**/launcher_logs/
+benchmark/**/logs/
+benchmark/**/.runner.lock
+benchmark/**/.launcher.lock
+benchmark/**/runtime_settings/
+
+# Archivos propios de cada computadora
+/tmp/
+*.log
+*.dpapi
+*.pem
+*.key
+*.local.json
+*.local.yaml
+*.local.yml
+**/vendor/
+**/credentials.json
+**/camera_restore.json
+**/ethernet-anterior.xml
+**/network_camera_*.txt
+**/PRUEBA_SINTETICA_NO_ES_CAMARA/
+**/best_ncnn_model/model.ncnn.bin
+~$*
+*.swp
+*.tmp
+
+# Salidas auxiliares de LaTeX; conservar las fuentes y PDF finales
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out

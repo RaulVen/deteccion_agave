@@ -1,0 +1,156 @@
+{
+  "attempts": [
+    {
+      "key_name": "ROBOFLOW_API_KEY_3DMENA",
+      "workspace_checks": [
+        {
+          "workspace": "raul-stlme",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "psa00",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "testingberries",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "precision-agricola",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "roboflow",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        }
+      ]
+    },
+    {
+      "key_name": "ROBOFLOW_API_KEY_PRECISIONAGRICOLA",
+      "workspace_checks": [
+        {
+          "workspace": "raul-stlme",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "psa00",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "testingberries",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "precision-agricola",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "roboflow",
+          "status": 404,
+          "error_preview": "{\"error\":{\"message\":\"Unsupported get request. Workspace with ID \\\"roboflow\\\" does not exist or cannot be loaded due to missing permissions.\",\"status\":404,\"type\":\"GraphMethodException\",\"hint\":\"You can see your available w"
+        }
+      ]
+    },
+    {
+      "key_name": "ROBOFLOW_API_KEY_ROMULOTRONCOSO",
+      "workspace_checks": [
+        {
+          "workspace": "raul-stlme",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "psa00",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "testingberries",
+          "status": 401,
+          "error_preview": "{\"error\":{\"message\":\"This API key does not exist (or has been revoked).\",\"status\":401,\"type\":\"OAuthException\",\"hint\":\"You may retrieve your API key via the Roboflow Dashboard. Go to Account > Roboflow Keys to retrieve yo"
+        },
+        {
+          "workspace": "precision-agricola",
+          "status": 404,
+          "error_preview": "{\"error\":{\"message\":\"Unsupported get request. Workspace with ID \\\"precision-agricola\\\" does not exist or cannot be loaded due to missing permissions.\",\"status\":404,\"type\":\"GraphMethodException\",\"hint\":\"You can see your a"
+        },
+        {
+          "workspace": "roboflow",
+          "status": 404,
+          "error_preview": "{\"error\":{\"message\":\"Unsupported get request. Workspace with ID \\\"roboflow\\\" does not exist or cannot be loaded due to missing permissions.\",\"status\":404,\"type\":\"GraphMethodException\",\"hint\":\"You can see your available w"
+        }
+      ]
+    },
+    {
+      "key_name": "ROBOFLOW_API_KEY",
+      "workspace_checks": [
+        {
+          "workspace": "raul-stlme",
+          "status": 200,
+          "projects_count": 1,
+          "matching_projects": [
+            {
+              "id": "raul-stlme/agave-vty65",
+              "name": "agave",
+              "images": 404,
+              "classes": {
+                "agave": 4374
+              },
+              "splits": {
+                "valid": 73,
+                "test": 36,
+                "train": 295
+              }
+            }
+          ]
+        },
+        {
+          "workspace": "psa00",
+          "status": 200,
+          "projects_count": 9,
+          "matching_projects": []
+        },
+        {
+          "workspace": "testingberries",
+          "status": 200,
+          "projects_count": 5,
+          "matching_projects": [
+            {
+              "id": "testingberries/agave_better2",
+              "name": "agave_better2",
+              "images": 1,
+              "classes": {
+                "agave-better2": 0,
+                "agave": 524
+              },
+              "splits": {
+                "test": 0,
+                "valid": 0,
+                "train": 1
+              }
+            }
+          ]
+        },
+        {
+          "workspace": "precision-agricola",
+          "status": 404,
+          "error_preview": "{\"error\":{\"message\":\"Unsupported get request. Workspace with ID \\\"precision-agricola\\\" does not exist or cannot be loaded due to missing permissions.\",\"status\":404,\"type\":\"GraphMethodException\",\"hint\":\"You can see your a"
+        },
+        {
+          "workspace": "roboflow",
+          "status": 404,
+          "error_preview": "{\"error\":{\"message\":\"Unsupported get request. Workspace with ID \\\"roboflow\\\" does not exist or cannot be loaded due to missing permissions.\",\"status\":404,\"type\":\"GraphMethodException\",\"hint\":\"You can see your available w"
+        }
+      ]
+    }
+  ]
+}

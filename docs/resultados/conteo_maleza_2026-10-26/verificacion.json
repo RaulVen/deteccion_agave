@@ -1,0 +1,32 @@
+[
+  {
+    "name": "anterior_0100_0136",
+    "frames": 540,
+    "duration_seconds": 36.0,
+    "crossings": 35,
+    "unique_counted_ids": 35,
+    "output_size": [
+      1280,
+      720
+    ],
+    "max_gap_frames": 3,
+    "events_integrity": "passed",
+    "bytes": 18161014,
+    "ffmpeg_full_decode_exit_code": 0
+  },
+  {
+    "name": "nuevo_0102_0320",
+    "frames": 2070,
+    "duration_seconds": 138.0,
+    "crossings": 139,
+    "unique_counted_ids": 139,
+    "output_size": [
+      1280,
+      720
+    ],
+    "max_gap_frames": 46,
+    "events_integrity": "passed",
+    "bytes": 69175574,
+    "ffmpeg_full_decode_exit_code": 0
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "load_seconds": 0.1947053930000493,
+  "mean_seconds": 0.7015317812000262,
+  "records": [
+    {
+      "image": "00.jpg",
+      "seconds": 0.7006275710000409,
+      "boxes": 10,
+      "max_numeric_difference": 6.103515625e-05
+    },
+    {
+      "image": "01.jpg",
+      "seconds": 0.7377648329999147,
+      "boxes": 11,
+      "max_numeric_difference": 0.0001220703125
+    },
+    {
+      "image": "02.jpg",
+      "seconds": 0.7357965209999975,
+      "boxes": 6,
+      "max_numeric_difference": 0.0001068115234375
+    },
+    {
+      "image": "03.jpg",
+      "seconds": 0.5877941230000943,
+      "boxes": 10,
+      "max_numeric_difference": 9.1552734375e-05
+    },
+    {
+      "image": "04.jpg",
+      "seconds": 0.7368949300000622,
+      "boxes": 12,
+      "max_numeric_difference": 0.0001220703125
+    },
+    {
+      "image": "05.jpg",
+      "seconds": 0.736432356000023,
+      "boxes": 5,
+      "max_numeric_difference": 0.0001220703125
+    },
+    {
+      "image": "06.jpg",
+      "seconds": 0.6076207170000316,
+      "boxes": 7,
+      "max_numeric_difference": 9.1552734375e-05
+    },
+    {
+      "image": "07.jpg",
+      "seconds": 0.728840347000073,
+      "boxes": 8,
+      "max_numeric_difference": 0.00018310546875
+    },
+    {
+      "image": "08.jpg",
+      "seconds": 0.728406423000024,
+      "boxes": 8,
+      "max_numeric_difference": 6.103515625e-05
+    },
+    {
+      "image": "09.jpg",
+      "seconds": 0.7151399910000009,
+      "boxes": 1,
+      "max_numeric_difference": 1.52587890625e-05
+    }
+  ]
+}

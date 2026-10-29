@@ -1,0 +1,213 @@
+{
+  "config": {
+    "model": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\models\\pretrained\\yolo26s.pt",
+    "data": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\datasets\\prepared\\agave_maleza_2026-10-21\\data.yaml",
+    "epochs": 150,
+    "time": null,
+    "patience": 0,
+    "batch": 8,
+    "imgsz": 960,
+    "save": true,
+    "save_period": 10,
+    "cache": false,
+    "device": "0",
+    "workers": 4,
+    "project": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\runs\\detect\\agave_maleza_150ep_opciones34_2026-10-22",
+    "name": "yolo26s_sgd_960_150e",
+    "exist_ok": false,
+    "pretrained": true,
+    "optimizer": "SGD",
+    "verbose": true,
+    "seed": 26,
+    "deterministic": true,
+    "single_cls": false,
+    "rect": false,
+    "cos_lr": true,
+    "close_mosaic": 0,
+    "resume": false,
+    "amp": true,
+    "fraction": 1.0,
+    "profile": false,
+    "freeze": null,
+    "multi_scale": 0.0,
+    "compile": false,
+    "val": true,
+    "split": "val",
+    "conf": null,
+    "iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "plots": true,
+    "end2end": null,
+    "lr0": 0.005,
+    "lrf": 0.01,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3.0,
+    "warmup_momentum": 0.8,
+    "warmup_bias_lr": 0.1,
+    "box": 7.5,
+    "cls": 0.5,
+    "cls_pw": 0.0,
+    "dfl": 1.5,
+    "nbs": 64,
+    "hsv_h": 0.02,
+    "hsv_s": 0.55,
+    "hsv_v": 0.35,
+    "degrees": 0,
+    "translate": 0.0,
+    "scale": 0.35,
+    "shear": 2,
+    "perspective": 0.0005,
+    "flipud": 0.0,
+    "fliplr": 0.5,
+    "bgr": 0.0,
+    "mosaic": 0.0,
+    "mixup": 0.05,
+    "cutmix": 0.0,
+    "copy_paste": 0.0,
+    "copy_paste_mode": "flip",
+    "auto_augment": "randaugment",
+    "erasing": 0.15
+  },
+  "status": "completed",
+  "epochs_required": 150,
+  "epochs_completed": 150,
+  "selection_imgsz": 960,
+  "evaluation_imgsz": 640,
+  "started_utc": "2026-10-22T07:48:40.697805+00:00",
+  "output": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\runs\\detect\\agave_maleza_150ep_opciones34_2026-10-22\\yolo26s_sgd_960_150e",
+  "checkpoint_selection": "maximum validation mAP50-95 at selection_imgsz, never test",
+  "batch_history": [
+    {
+      "epoch": 0,
+      "timestamp_utc": "2026-10-22T07:48:41.415068+00:00",
+      "effective_batch": 8
+    }
+  ],
+  "configured_batch": 8,
+  "effective_batch": 8,
+  "resolved_optimizer": {
+    "declared": "SGD",
+    "class": "SGD",
+    "warmup_bias_lr": 0.1,
+    "groups": [
+      {
+        "lr": 0.005,
+        "initial_lr": 0.005,
+        "momentum": 0.937,
+        "weight_decay": 0.0005
+      },
+      {
+        "lr": 0.005,
+        "initial_lr": 0.005,
+        "momentum": 0.937,
+        "weight_decay": 0.0
+      },
+      {
+        "lr": 0.005,
+        "initial_lr": 0.005,
+        "momentum": 0.937,
+        "weight_decay": 0
+      }
+    ]
+  },
+  "effective_optimizer": {
+    "class": "SGD",
+    "groups": [
+      {
+        "lr": 5.054280839975722e-05,
+        "momentum": 0.937,
+        "weight_decay": 0.0005
+      },
+      {
+        "lr": 5.054280839975722e-05,
+        "momentum": 0.937,
+        "weight_decay": 0.0
+      },
+      {
+        "lr": 5.054280839975722e-05,
+        "momentum": 0.937,
+        "weight_decay": 0
+      }
+    ]
+  },
+  "latest": {
+    "epoch": 150,
+    "epochs_required": 150,
+    "timestamp_utc": "2026-10-22T10:21:24.921903+00:00",
+    "elapsed_seconds": 9163.91,
+    "metrics": {
+      "metrics/precision(B)": 0.81343,
+      "metrics/recall(B)": 0.71958,
+      "metrics/mAP50(B)": 0.75328,
+      "metrics/mAP50-95(B)": 0.29504,
+      "val/box_loss": 2.18023,
+      "val/cls_loss": 1.22328,
+      "val/dfl_loss": 0.02099
+    },
+    "best_fitness": 0.38467,
+    "batch": 8,
+    "accumulate": 8,
+    "optimizer": {
+      "class": "SGD",
+      "groups": [
+        {
+          "lr": 5.054280839975722e-05,
+          "momentum": 0.937,
+          "weight_decay": 0.0005
+        },
+        {
+          "lr": 5.054280839975722e-05,
+          "momentum": 0.937,
+          "weight_decay": 0.0
+        },
+        {
+          "lr": 5.054280839975722e-05,
+          "momentum": 0.937,
+          "weight_decay": 0
+        }
+      ]
+    }
+  },
+  "training_verified": {
+    "epochs_verified": 150,
+    "best_epoch": 20,
+    "batch_in_saved_args": 8,
+    "checkpoint_sha256": {
+      "best.pt": "e9ea2e3e9d33a386686dba4b54a917e7d157840f1408624ea2a83a9550b8f04d",
+      "last.pt": "bc20916209bd21b9b372661accbb94b65cb22b993dcbd31344ab4f0d07058103"
+    },
+    "results_csv_sha256": "30cc34f57af601f76db8d85d494c126dbf0a62d0d83b6110f16ac046d4b5f9d8"
+  },
+  "training_completed_utc": "2026-10-22T10:21:33.894290+00:00",
+  "evaluation": {
+    "val_precision": 0.7889972235485121,
+    "val_recall": 0.7125042130097742,
+    "val_mAP50": 0.8078988906301974,
+    "val_mAP50_95": 0.3545466949301969,
+    "test_precision": 0.6490655838017849,
+    "test_recall": 0.5246636771300448,
+    "test_mAP50": 0.5769240412613073,
+    "test_mAP50_95": 0.2093594775789179
+  },
+  "evaluation_protocol": {
+    "imgsz": 640,
+    "batch": 8,
+    "device": "0",
+    "workers": 4,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "augment": false,
+    "rect": true,
+    "plots": true,
+    "save_json": false,
+    "save_txt": false,
+    "verbose": true,
+    "seed": 26,
+    "deterministic": true
+  },
+  "completed_utc": "2026-10-22T10:21:56.011417+00:00"
+}

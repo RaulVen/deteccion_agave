@@ -13,7 +13,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs" / "Reporte_avance_tesis_deteccion_agave_yolo.docx"
+OUT = ROOT / "docs" / "reportes" / "Reporte_avance_tesis_deteccion_agave_yolo.docx"
 RESULTS = ROOT / "docs" / "results"
 
 BLUE = RGBColor(46, 116, 181)
@@ -397,7 +397,7 @@ def build() -> None:
             ("Loss", "box=7.5, cls=0.5, dfl=1.5"),
         ],
     )
-    code_block(doc, read_file("training_configs/yolo26s_sgd_cos_slow_120e.yaml", 4200))
+    code_block(doc, read_file("configs/training/historico_2026-05_06/yolo26s_sgd_cos_slow_120e.yaml", 4200))
 
     doc.add_heading("5. Resultados y evidencia visual", level=1)
     doc.add_paragraph(
@@ -470,9 +470,9 @@ def build() -> None:
     )
     code_block(
         doc,
-        "$env:PIPENV_VENV_IN_PROJECT='1'\npy -3.12 -m pipenv run python scripts/track_count_line.py `\n  --model \"runs/detect/agave_experiments/yolo26s_sgd_cos_slow_120e/weights/best.pt\" `\n  --source \"video_predictions/3_segment_01m30s_02m00s.mp4\" `\n  --output \"video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.mp4\" `\n  --csv \"video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.csv\" `\n  --tracker \"tracking_configs/botsort_agave.yaml\" `\n  --line-ratio 0.50 `\n  --direction down `\n  --conf 0.30 `\n  --iou 0.40 `\n  --imgsz 640 `\n  --device 0 `\n  --unique-id-only `\n  --show-conf",
+        "$env:PIPENV_VENV_IN_PROJECT='1'\npy -3.12 -m pipenv run python scripts/track_count_line.py `\n  --model \"runs/detect/agave_experiments/yolo26s_sgd_cos_slow_120e/weights/best.pt\" `\n  --source \"video_predictions/3_segment_01m30s_02m00s.mp4\" `\n  --output \"video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.mp4\" `\n  --csv \"video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.csv\" `\n  --tracker \"configs/tracking/botsort_agave.yaml\" `\n  --line-ratio 0.50 `\n  --direction down `\n  --conf 0.30 `\n  --iou 0.40 `\n  --imgsz 640 `\n  --device 0 `\n  --unique-id-only `\n  --show-conf",
     )
-    code_block(doc, read_file("tracking_configs/botsort_agave.yaml", 1200))
+    code_block(doc, read_file("configs/tracking/botsort_agave.yaml", 1200))
 
     doc.add_heading("8. Comparacion entre avance real y siguientes fases", level=1)
     doc.add_paragraph(
@@ -505,11 +505,11 @@ def build() -> None:
         [
             ("Mejor modelo", r"runs/detect/agave_experiments/yolo26s_sgd_cos_slow_120e/weights/best.pt"),
             ("Benchmark", "benchmark/agave_benchmark.csv"),
-            ("Configuracion ganadora", "training_configs/yolo26s_sgd_cos_slow_120e.yaml"),
+            ("Configuracion ganadora", "configs/training/historico_2026-05_06/yolo26s_sgd_cos_slow_120e.yaml"),
             ("Script tracking", "scripts/track_count_line.py"),
-            ("Config tracker", "tracking_configs/botsort_agave.yaml"),
+            ("Config tracker", "configs/tracking/botsort_agave.yaml"),
             ("Video final", "video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.mp4"),
-            ("Reporte", "docs/Reporte_avance_tesis_deteccion_agave_yolo.docx"),
+            ("Reporte", "docs/reportes/Reporte_avance_tesis_deteccion_agave_yolo.docx"),
         ],
     )
 

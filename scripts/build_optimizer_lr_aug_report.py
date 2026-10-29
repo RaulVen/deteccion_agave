@@ -12,7 +12,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs" / "Reporte_optimizadores_lr_aumentacion_agave.docx"
+OUT = ROOT / "docs" / "reportes" / "Reporte_optimizadores_lr_aumentacion_agave.docx"
 RESULTS = ROOT / "docs" / "results"
 
 BLUE = RGBColor(46, 116, 181)

@@ -1,0 +1,59 @@
+#!/usr/bin/python3 -I
+"""Prepare only the camera's Ethernet link; never requires internet."""
+import json
+import subprocess
+import time
+from pathlib import Path
+
+NM='/usr/bin/nmcli'
+PROFILE='Agave campo directo'
+LAN='netplan-eth0'
+STATUS=Path('/run/agave-field-network.json')
+
+def run(*args,timeout=20):
+    return subprocess.run(args,capture_output=True,text=True,timeout=timeout)
+
+def status(mode,message):
+    STATUS.write_text(json.dumps({'mode':mode,'message':message,'time':time.time()}))
+    print(message,flush=True)
+
+def main():
+    if len(__import__('sys').argv)!=1:
+        raise SystemExit('This helper takes no arguments')
+    for _ in range(8):
+        if Path('/sys/class/net/eth0/carrier').read_text().strip()=='1': break
+        time.sleep(1)
+    else:
+        status('error','No hay enlace Ethernet. Conecta y enciende la camara; revisa su alimentacion/PoE.')
+        return 2
+    active=run(NM,'-g','GENERAL.CONNECTION','device','show','eth0').stdout.strip()
+    # Probe the known LOCAL router by ARP; do not probe the internet.
+    gateway='192.168.1.254'
+    routes=run('/usr/bin/ip','-j','route','show','default','dev','eth0')
+    for route in json.loads(routes.stdout or '[]'):
+        if route.get('gateway'): gateway=route['gateway']; break
+    router=run('/usr/bin/arping','-I','eth0','-s','0.0.0.0','-c','2','-w','2',gateway,timeout=4)
+    if router.returncode==0:
+        if active==PROFILE:
+            result=run(NM,'--wait','15','connection','up',LAN,timeout=20)
+            if result.returncode: raise RuntimeError('No se pudo volver a la red local del router')
+        status('lan','Router local disponible: se conserva la conexion de laboratorio. Internet no se comprueba.')
+        return 0
+    if active!=PROFILE:
+        status('preparing','Sin router local: preparando Ethernet directo para la camara...')
+        result=run(NM,'--wait','15','connection','up',PROFILE,timeout=20)
+        if result.returncode:
+            status('error','No se pudo activar la red de campo: '+result.stderr.strip())
+            return 3
+    # NetworkManager shared mode keeps only its primary address. Add local
+    # aliases for cameras retaining common factory static addresses.
+    for address in ('192.168.0.239/24','10.1.1.239/24'):
+        result=run('/usr/bin/ip','address','replace',address,'dev','eth0')
+        if result.returncode: raise RuntimeError('No se pudo preparar la subred '+address)
+    status('field','Modo campo listo: Raspberry 192.168.1.239. DHCP local disponible para la camara; no requiere router ni internet.')
+    return 0
+
+if __name__=='__main__':
+    try: raise SystemExit(main())
+    except (OSError,subprocess.SubprocessError,RuntimeError) as exc:
+        status('error',str(exc)); raise SystemExit(1)

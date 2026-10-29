@@ -1,0 +1,16 @@
+{
+  "pid": 19876,
+  "started_utc": "2026-10-22T03:59:07.1020190Z",
+  "python": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\.venv\\Scripts\\python.exe",
+  "script": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\scripts\\train_campaign_150.py",
+  "arguments": [
+    "--run"
+  ],
+  "stdout": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\benchmark\\agave_maleza_150ep_2026-10-21\\launcher_logs\\20261022T035907074Z_stdout.log",
+  "stderr": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\benchmark\\agave_maleza_150ep_2026-10-21\\launcher_logs\\20261022T035907074Z_stderr.log",
+  "epochs_each": 150,
+  "order": [
+    "yolo26s_sgd_640_150e",
+    "yolo26n_campo_640_150e"
+  ]
+}

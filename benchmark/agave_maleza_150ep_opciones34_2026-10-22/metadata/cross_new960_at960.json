@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-22T11:48:14.460353+00:00",
+  "output": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\runs\\detect\\agave_maleza_150ep_opciones34_2026-10-22\\cross_resolution_evaluation\\new960_at960",
+  "run": "yolo26s_sgd_960_150e",
+  "weights": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\runs\\detect\\agave_maleza_150ep_opciones34_2026-10-22\\yolo26s_sgd_960_150e\\weights\\best.pt",
+  "weights_sha256": "e9ea2e3e9d33a386686dba4b54a917e7d157840f1408624ea2a83a9550b8f04d",
+  "selection_imgsz": 960,
+  "evaluation_imgsz": 960,
+  "best_epoch": 20,
+  "protocol": {
+    "imgsz": 960,
+    "batch": 8,
+    "device": "0",
+    "workers": 4,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "half": false,
+    "augment": false,
+    "rect": true,
+    "plots": true,
+    "save_json": false,
+    "save_txt": false,
+    "verbose": true,
+    "seed": 26,
+    "deterministic": true
+  },
+  "evaluation": {
+    "val_precision": 0.8073995290610257,
+    "val_recall": 0.7446020521789752,
+    "val_mAP50": 0.8447165927554066,
+    "val_mAP50_95": 0.38489059007912696,
+    "test_precision": 0.6788881767509001,
+    "test_recall": 0.6062780269058295,
+    "test_mAP50": 0.6698351399154372,
+    "test_mAP50_95": 0.24674752777969472
+  },
+  "completed_utc": "2026-10-22T11:48:36.663346+00:00"
+}

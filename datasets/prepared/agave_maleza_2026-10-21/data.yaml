@@ -1,0 +1,7 @@
+path: C:/Users/iceve/Documents/github/deteccion de agave/datasets/prepared/agave_maleza_2026-10-21
+train: images/train
+val: images/val
+test: images/test
+nc: 1
+names:
+- agave

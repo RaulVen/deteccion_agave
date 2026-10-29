@@ -1,0 +1,16 @@
+{
+  "live_records": 404,
+  "local_records": 404,
+  "live_boxes": 4373,
+  "local_boxes": 4371,
+  "missing_local": [],
+  "missing_live": [],
+  "count_differences": [
+    {
+      "name": "captura_001_corto_f00004_t0000-27s.jpg",
+      "local_boxes": 9,
+      "live_boxes": 11,
+      "delta_live_minus_local": 2
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# Mismo contenido de texto entre Windows y otras plataformas.
+* text=auto
+.gitattributes text eol=lf
+.gitignore text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.tex text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.csv text eol=lf
+*.tsv text eol=lf
+*.ps1 text eol=crlf
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+# Estas copias tienen manifiestos SHA-256: preservar sus bytes al clonar.
+/docs/resultados/** -text whitespace=cr-at-eol
+/docs/resultados/README.md text eol=lf
+/docs/resultados/manifest.json text eol=lf
+/hardware/raspberry/restore/best_ncnn_model/** -text whitespace=cr-at-eol

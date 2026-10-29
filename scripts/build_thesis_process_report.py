@@ -14,7 +14,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs" / "Reporte_tesis_proceso_completo_agave.docx"
+OUT = ROOT / "docs" / "reportes" / "Reporte_tesis_proceso_completo_agave.docx"
 RESULTS = ROOT / "docs" / "results"
 RUN = ROOT / "runs" / "detect" / "agave_experiments" / "yolo26s_sgd_cos_slow_120e"
 
@@ -409,7 +409,7 @@ def build() -> None:
             ("Pesos de perdida", "box=7.5, cls=0.5, dfl=1.5"),
         ],
     )
-    code_block(doc, read_text("training_configs/yolo26s_sgd_cos_slow_120e.yaml", max_chars=4500))
+    code_block(doc, read_text("configs/training/historico_2026-05_06/yolo26s_sgd_cos_slow_120e.yaml", max_chars=4500))
 
     doc.add_heading("8. Todos los entrenamientos comparados", level=1)
     doc.add_paragraph(
@@ -505,7 +505,7 @@ def build() -> None:
             ("duplicate suppression", "Logica para evitar contar dos veces el mismo evento cuando los IDs cambian o se pierde la deteccion."),
         ],
     )
-    code_block(doc, read_text("tracking_configs/botsort_agave.yaml", max_chars=1200))
+    code_block(doc, read_text("configs/tracking/botsort_agave.yaml", max_chars=1200))
 
     doc.add_heading("14. Codigo principal utilizado", level=1)
     doc.add_paragraph(
@@ -514,7 +514,7 @@ def build() -> None:
     doc.add_heading("14.1 Comando de tracking final", level=2)
     code_block(
         doc,
-        "$env:PIPENV_VENV_IN_PROJECT='1'\npy -3.12 -m pipenv run python scripts/track_count_line.py `\n  --model \"runs/detect/agave_experiments/yolo26s_sgd_cos_slow_120e/weights/best.pt\" `\n  --source \"video_predictions/3_segment_01m30s_02m00s.mp4\" `\n  --output \"video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.mp4\" `\n  --csv \"video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.csv\" `\n  --tracker \"tracking_configs/botsort_agave.yaml\" `\n  --line-ratio 0.50 `\n  --direction down `\n  --conf 0.30 `\n  --iou 0.40 `\n  --imgsz 640 `\n  --device 0 `\n  --unique-id-only `\n  --show-conf",
+        "$env:PIPENV_VENV_IN_PROJECT='1'\npy -3.12 -m pipenv run python scripts/track_count_line.py `\n  --model \"runs/detect/agave_experiments/yolo26s_sgd_cos_slow_120e/weights/best.pt\" `\n  --source \"video_predictions/3_segment_01m30s_02m00s.mp4\" `\n  --output \"video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.mp4\" `\n  --csv \"video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.csv\" `\n  --tracker \"configs/tracking/botsort_agave.yaml\" `\n  --line-ratio 0.50 `\n  --direction down `\n  --conf 0.30 `\n  --iou 0.40 `\n  --imgsz 640 `\n  --device 0 `\n  --unique-id-only `\n  --show-conf",
     )
     doc.add_heading("14.2 Fragmento del script de conteo", level=2)
     code_block(doc, read_text("scripts/track_count_line.py", max_chars=6200))

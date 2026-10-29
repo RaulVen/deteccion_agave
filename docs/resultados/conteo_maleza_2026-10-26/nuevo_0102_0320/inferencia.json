@@ -1,0 +1,86 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-26T17:58:35.255112+00:00",
+  "source": "C:\\Users\\iceve\\Documents\\videos\\videos maleza\\19\\19.44.14-19.50.00[R][0@0][0][-21600].dav",
+  "source_sha256": "d0f8e8af2962fe26dbe4fb9955c0ee305f40630724cc7032f4ab5ca6ea72e046",
+  "source_fps": 15.0,
+  "source_size": [
+    2880,
+    1620
+  ],
+  "start_frame_zero_based": 930,
+  "end_frame_exclusive": 3000,
+  "start_seconds": 62.0,
+  "duration_seconds": 138.0,
+  "model": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\runs\\detect\\agave_maleza_150ep_2026-10-21\\yolo26s_sgd_640_150e\\weights\\best.pt",
+  "model_sha256": "aef8bce09a9c76ae5ec0f30e2ef2f2958d681715e563fe9b4927399d827f28e7",
+  "parameters": {
+    "imgsz": 640,
+    "conf": 0.3,
+    "iou": 0.7,
+    "rect": false,
+    "half": false,
+    "max_det": 300,
+    "device": "0"
+  },
+  "ultralytics": "8.4.57",
+  "torch": "2.10.0+cu128",
+  "output_size": [
+    1280,
+    720
+  ],
+  "output_fps": 15.0,
+  "interpretation": "Automatic line-crossing events by persistent track ID; no manual ground-truth count.",
+  "frames_written": 2070,
+  "classes": {
+    "0": "agave"
+  },
+  "model_end2end": true,
+  "tracking": {
+    "tracker_yaml": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\configs\\tracking\\botsort_agave.yaml",
+    "tracker_sha256": "67b37b63704d32e79494aec8ce439776caa808685045999a07ba4d6ab01062e8",
+    "persist": true,
+    "line_ratio": 0.5,
+    "line_y_source": 810.0,
+    "anchor": "bounding_box_center",
+    "direction": "down",
+    "unique_id_once_per_direction": true,
+    "start_state": "Tracker and counter start empty at the clip's first frame.",
+    "note": "IDs are tracker identities, not a verified census of unique plants."
+  },
+  "crossing_counts": {
+    "down": 139,
+    "up": 0
+  },
+  "crossing_total": 139,
+  "video": "C:\\Users\\iceve\\Documents\\github\\deteccion de agave\\video_predictions\\conteo_maleza_2026-10-26\\nuevo_0102_0320\\conteo_agaves.mp4",
+  "completed_utc": "2026-10-26T18:01:55.083836+00:00",
+  "processing_wall_seconds": 192.96754570002668,
+  "detection_count_per_frame": {
+    "min": 0,
+    "max": 9,
+    "median": 4.0,
+    "zero_detection_frames": 7
+  },
+  "verification": {
+    "name": "nuevo_0102_0320",
+    "frames": 2070,
+    "duration_seconds": 138.0,
+    "crossings": 139,
+    "unique_counted_ids": 139,
+    "output_size": [
+      1280,
+      720
+    ],
+    "max_gap_frames": 46,
+    "events_integrity": "passed",
+    "bytes": 69175574,
+    "ffmpeg_full_decode_exit_code": 0
+  },
+  "provenance": {
+    "prepared_dataset": "agave_maleza_2026-10-21",
+    "source_video_id": "v04",
+    "source_has_images_in": "train",
+    "interpretation": "Demonstration from the same field outing; not an independent test."
+  }
+}

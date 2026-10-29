@@ -12,7 +12,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs" / "Reporte_avances_deteccion_agave.docx"
+OUT = ROOT / "docs" / "reportes" / "Reporte_avances_deteccion_agave.docx"
 
 BLUE = RGBColor(46, 116, 181)
 DARK_BLUE = RGBColor(31, 77, 120)
@@ -603,7 +603,7 @@ def build() -> None:
             ("Modo usado", "--unique-id-only"),
             ("Direccion", "down / hacia abajo"),
             ("Linea", "50% del frame"),
-            ("Tracker", "BoT-SORT mediante tracking_configs/botsort_agave.yaml"),
+            ("Tracker", "BoT-SORT mediante configs/tracking/botsort_agave.yaml"),
             ("Resultado corregido", "41 IDs unicos contados hacia abajo"),
             ("Duplicados suprimidos", "0 en modo unique-id-only, porque el control se hizo por ID unico"),
         ],
@@ -687,11 +687,11 @@ def build() -> None:
         [
             ("Mejor peso local", r"runs/detect/agave_experiments/yolo26s_sgd_cos_slow_120e/weights/best.pt"),
             ("Benchmark", "benchmark/agave_benchmark.csv"),
-            ("Configuracion ganadora", "training_configs/yolo26s_sgd_cos_slow_120e.yaml"),
+            ("Configuracion ganadora", "configs/training/historico_2026-05_06/yolo26s_sgd_cos_slow_120e.yaml"),
             ("Script de tracking", "scripts/track_count_line.py"),
-            ("Tracker config", "tracking_configs/botsort_agave.yaml"),
+            ("Tracker config", "configs/tracking/botsort_agave.yaml"),
             ("README tecnico", "README.md"),
-            ("Documento de avances", "docs/Reporte_avances_deteccion_agave.docx"),
+            ("Documento de avances", "docs/reportes/Reporte_avances_deteccion_agave.docx"),
         ],
     )
 

@@ -1,190 +1,110 @@
-# Deteccion de Agave
+# Deteccion de agave
 
-Proyecto local para deteccion, inferencia, tracking y conteo de agaves con YOLO26, Roboflow, Pipenv y GPU NVIDIA.
+Proyecto de deteccion, seguimiento y conteo de agaves con YOLO26. Reorganizado el 21 de octubre de 2026 para entrenar con las imagenes originales y las nuevas escenas con maleza.
 
-## Estado del Proyecto
+## Trabajo entre computadoras
 
-- Rama actual del commit: `main`
-- Remoto configurado: `https://github.com/RaulVen/deteccion_agave.git`
-- Entorno: Pipenv con Python `3.12.9`
-- GPU validada: NVIDIA GeForce RTX 5050 Laptop GPU, CUDA disponible con PyTorch `2.10.0+cu128`
-- Dataset YOLO: `datasets/yolo26`
-- Particion del dataset: `train=295`, `val=73`, `test=36`
-- Clase: `agave`
+Este repositorio reúne la redacción y el trabajo computacional. La rama compartida es **`main`**. Antes de trabajar descarga los cambios; al terminar guarda un commit y haz push. Consulta la [guía de sincronización](docs/SINCRONIZACION.md) para la primera descarga y para conservar los cambios de ambos equipos.
 
-El dataset, los pesos, videos y carpetas completas de entrenamiento no se versionan por tamano. Se conservan localmente y quedan protegidos por `.gitignore`.
+| Necesito… | Abrir |
+|---|---|
+| Continuar la tesis en la computadora de redacción | [Índice de capítulos y contexto](docs/tesis/README.md) |
+| Consultar resultados y figuras sin entrenar | [Evidencia para redacción](docs/resultados/README.md) |
+| Editar el artículo o revisar reportes anteriores | [Artículo](docs/paper/), [reportes Word](docs/reportes/) |
+| Trabajar en detección, seguimiento o entrenamiento | [scripts](scripts/), [src](src/), [configs](configs/), [benchmark](benchmark/) |
+| Trabajar con la cámara y Raspberry Pi | [Prototipo y requisitos](hardware/README.md) |
 
-## Mejor Modelo Actual
+Los capítulos y la evidencia se pueden consultar sin instalar el entorno de entrenamiento. Los datasets completos, pesos, videos, entornos y credenciales permanecen en la computadora de cómputo; Git comparte el código, documentos y resultados seleccionados.
 
-El mejor modelo hasta ahora es:
+## Dataset listo para la nueva etapa
 
-```text
-runs/detect/agave_experiments/yolo26s_sgd_cos_slow_120e/weights/best.pt
-```
+Entrada: `datasets/prepared/agave_maleza_2026-10-21/data.yaml`.
 
-Este modelo queda documentado y preparado en la rama `main`. Si despues queremos publicar una rama separada para experimentos, una buena opcion seria `experiments/yolo26-agave`.
+| Procedencia | Entrenamiento | Validacion | Prueba | Reserva | Total |
+|---|---:|---:|---:|---:|---:|
+| Dataset anterior | 295 | 73 | 36 | 0 | 404 |
+| Nuevas imagenes con maleza | 1198 | 362 | 100 | 166 | 1826 |
+| **Combinado** | **1493** | **435** | **136** | **166** | **2230** |
 
-Metricas principales en test:
+Hay 2064 imagenes activas y 166 conservadas en reserva. Todas mantienen la resolucion original de 2880x1620 y la clase unica `agave`; la maleza es contexto/fondo, no una clase nueva. El redimensionado a 640 o 960, segun el experimento, y los aumentos se aplican durante el entrenamiento.
 
-- Precision: `0.693`
-- Recall: `0.615`
-- mAP50: `0.654`
-- mAP50-95: `0.213`
-- Epocas corridas: `86`
-- Mejor epoca: `56`
+Los clips nuevos se agrupan por tramos; se reservan 60 segundos a cada lado de las fronteras entre particiones para reducir la similitud temporal. `images/reserve` y `labels/reserve` guardan esos fotogramas y no aparecen en `data.yaml`. La evaluacion sigue siendo interna a una misma salida de campo: no demuestra generalizacion a otro terreno o fecha. La particion historica se mantiene intacta.
 
-Parametros recomendados para inferencia/tracking:
+Consultar [la preparacion y sus verificaciones](docs/REORGANIZACION_Y_DATASET.md), el `manifest.csv`, `summary.json` y `split_policy.json` dentro del dataset.
 
-```text
-conf=0.30
-iou=0.40
-imgsz=640
-device=0
-```
+La comprobacion final de lectura con Ultralytics y ejecucion en GPU paso. Antes de entrenar conviene revisar [dos casos de anotacion](docs/dataset_2026-10-21/REVISION_ETIQUETAS.md) detectados en una muestra visual: posibles plantas sin caja y un fragmento de hoja en una imagen negativa.
 
-## Benchmark de Experimentos
+## Ultima campaña completada: opciones 3 y 4, 150 epocas completas
 
-Los resultados completos estan en `benchmark/agave_benchmark.csv`.
+Autorizada el 22 de octubre de 2026: **YOLO26s + SGD a 960** y despues **YOLO26s + SGD a 640 con `box=9.0`**, ambos con 150 epocas, `patience=0`, `time=null`, inversion vertical desactivada y los mismos aumentos de iluminacion. Cada experimento cambia un hiperparametro respecto a la referencia SGD de la primera campaña.
 
-| Rank | Run | Modelo base | Epocas | Mejor epoca | Precision test | Recall test | mAP50 test | mAP50-95 test |
-|---:|---|---|---:|---:|---:|---:|---:|---:|
-| 1 | `yolo26s_sgd_cos_slow_120e` | `yolo26s.pt` | 86 | 56 | 0.693 | 0.615 | 0.654 | 0.213 |
-| 2 | `yolo26n_field_aug_60e` | `yolo26n.pt` | 60 | 55 | 0.637 | 0.539 | 0.596 | 0.201 |
-| 3 | `yolo26s_adamw_box_focus_120e` | `yolo26s.pt` | 105 | 75 | 0.659 | 0.509 | 0.581 | 0.200 |
-| 4 | `yolo26n_medium_aug_30e` | `yolo26n.pt` | 30 | 28 | 0.614 | 0.558 | 0.598 | 0.197 |
-| 5 | `yolo26n_field_aug_90e` | `yolo26n.pt` | 79 | 54 | 0.631 | 0.539 | 0.599 | 0.192 |
-| 6 | `yolo26s_adamw_cos_low_lr_120e` | `yolo26s.pt` | 57 | 27 | 0.633 | 0.521 | 0.589 | 0.192 |
-| 7 | `yolo26s_field_aug_60e` | `yolo26s.pt` | 60 | 40 | 0.622 | 0.583 | 0.609 | 0.192 |
-| 8 | `yolo26s_loss_box_dfl_45e` | `yolo26s.pt` | 45 | 40 | 0.617 | 0.529 | 0.571 | 0.186 |
-| 9 | `yolo26s_coslr_balanced_45e` | `yolo26s.pt` | 44 | 32 | 0.549 | 0.603 | 0.567 | 0.183 |
-| 10 | `yolo26s_loss_precision_45e` | `yolo26s.pt` | 20 | 8 | 0.596 | 0.546 | 0.526 | 0.157 |
-| 11 | `agave_quick_test` | `yolo26n.pt` | 3 | 3 | 0.431 | 0.407 | 0.370 | 0.109 |
+Ambos completaron las 150 epocas y las evaluaciones el 22 de octubre de 2026. [Comparacion de los cuatro modelos y graficas](docs/COMPARACION_CUATRO_MODELOS_150_EPOCAS_2026-10-22.md).
 
-## Imagenes de Resultado
+- [Protocolo de las opciones 3 y 4](docs/ENTRENAMIENTO_OPCIONES_3_4_150_EPOCAS.md).
+- Configuraciones: `configs/training/agave_maleza_150ep_opciones34_2026-10-22/`.
+- Corridas: `runs/detect/agave_maleza_150ep_opciones34_2026-10-22/`.
+- Estado y resultados: `benchmark/agave_maleza_150ep_opciones34_2026-10-22/`.
+- Comprobacion: `.\.venv\Scripts\python.exe -B scripts\train_campaign_opciones34_150.py --check`.
+- Lanzamiento unico: `scripts/start_campaign_opciones34_150.ps1`.
+- Seguimiento durante la ejecucion cada 30 minutos; se pausa al entregar el informe final.
 
-Curvas del mejor entrenamiento:
+El benchmark principal se evalua a 640 para compararlo con las dos corridas completadas. La evaluacion adicional a 960 del nuevo modelo y de la referencia se guarda separada.
 
-![Curvas de entrenamiento](docs/results/best_yolo26s_results.png)
+## Primera campaña completada: dos modelos, 150 epocas completas
 
-Matriz de confusion:
+Se seleccionaron **YOLO26s con SGD** y **YOLO26n con aumentos de campo**, ambos a 640, con **150 epocas, sin parada temprana** (`patience=0`, `time=null`). Se elimino la inversion vertical (`flipud=0`) y se conservaron los aumentos HSV de brillo, saturacion y tono, junto con el resto del protocolo.
 
-![Matriz de confusion](docs/results/best_yolo26s_confusion_matrix.png)
+Ambos terminaron las 150 epocas. [Resultados y graficas](docs/RESULTADOS_150_EPOCAS_2026-10-22.md) y [protocolo](docs/ENTRENAMIENTO_150_EPOCAS.md).
 
-Predicciones de validacion:
+- Configuraciones: `configs/training/agave_maleza_150ep_2026-10-21/`.
+- Corridas: `runs/detect/agave_maleza_150ep_2026-10-21/`.
+- Estado, logs y resultados: `benchmark/agave_maleza_150ep_2026-10-21/`.
+- Cada corrida conserva `results.csv`, graficas `results.png`, `best.pt`, `last.pt` y checkpoints cada 10 epocas.
 
-![Predicciones de validacion](docs/results/best_yolo26s_val_predictions.jpg)
-
-Captura final de tracking y conteo:
-
-![Tracking final](docs/results/final_tracking_video_frame.jpg)
-
-## Reportes de Tesis
-
-Se agregaron reportes Word reproducibles generados desde `scripts/` y basados en el modelo ganador `yolo26s_sgd_cos_slow_120e`:
-
-- `docs/Reporte_avance_tesis_deteccion_agave_yolo.docx`
-- `docs/Reporte_tesis_proceso_completo_agave.docx`
-- `docs/Reporte_especifico_modelo_agave.docx`
-- `docs/Reporte_optimizadores_lr_aumentacion_agave.docx`
-
-Tambien se agregaron figuras explicativas en `docs/results/` sobre aumentacion de datos, arquitectura/metricas del modelo, matriz de confusion legible, accuracy operacional y tracking final.
-
-## Tracking y Conteo
-
-Se agrego un script para tracking con ID unico y conteo por cruce de linea horizontal:
-
-```text
-scripts/track_count_line.py
-```
-
-Configuracion de tracker:
-
-```text
-tracking_configs/botsort_agave.yaml
-```
-
-Ultima prueba sobre el segmento `01:30` a `02:00` del video `3.mp4`:
-
-- Linea horizontal: `50%` del frame
-- Direccion de conteo: hacia abajo
-- Conteo corregido: `41` IDs unicos
-- CSV local: `video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.csv`
-- Video local: `video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.mp4`
-
-Comando usado:
+Para comprobar la configuracion antes del primer lanzamiento:
 
 ```powershell
-$env:PIPENV_VENV_IN_PROJECT='1'
-py -3.12 -m pipenv run python scripts/track_count_line.py `
-  --model "runs/detect/agave_experiments/yolo26s_sgd_cos_slow_120e/weights/best.pt" `
-  --source "video_predictions/3_segment_01m30s_02m00s.mp4" `
-  --output "video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.mp4" `
-  --csv "video_predictions/3_segment_01m30s_02m00s_tracking_line50_down_unique.csv" `
-  --tracker "tracking_configs/botsort_agave.yaml" `
-  --line-ratio 0.50 `
-  --direction down `
-  --conf 0.30 `
-  --iou 0.40 `
-  --imgsz 640 `
-  --device 0 `
-  --unique-id-only `
-  --show-conf
+.\.venv\Scripts\python.exe scripts\train_campaign_150.py --check
 ```
 
-## Entrenamiento
+El lanzamiento se realiza una sola vez con `scripts/start_campaign_150.ps1`. Cuando exista `launch.json`, consultar el estado antes de volver a ejecutar: el lanzador evita duplicar esta campaña. Los resultados anteriores se conservan intactos.
 
-Las configuraciones probadas se encuentran en:
+Las once configuraciones de la propuesta anterior siguen archivadas en `configs/training/agave_maleza_2026-10-21/` y documentadas en [el protocolo anterior](docs/PROTOCOLO_REENTRENAMIENTO.md).
 
-```text
-training_configs/
-```
+Los CSV historicos usan otro test. Para comparar pesos antiguos y nuevos se necesita evaluarlos sobre el mismo conjunto con los mismos parametros; no interpretar diferencias entre CSV distintos como una mejora controlada.
 
-La configuracion ganadora es:
+## Donde esta cada cosa
 
-```text
-training_configs/yolo26s_sgd_cos_slow_120e.yaml
-```
+| Carpeta | Contenido |
+|---|---|
+| `datasets/prepared/agave_maleza_2026-10-21/` | Imagenes y etiquetas combinadas; entrada para entrenar |
+| `datasets/raw/maleza_2026-10-21/` | ZIP nuevo original, metadatos y SHA-256 |
+| `datasets/yolo26/` | Dataset historico de 404 imagenes, intacto |
+| `datasets/agave.yolo26.zip` | Exportacion original anterior |
+| `configs/training/agave_maleza_150ep_opciones34_2026-10-22/` | Opciones 3 y 4: resolucion 960 y peso de cajas 9.0 |
+| `configs/training/agave_maleza_150ep_2026-10-21/` | Dos configuraciones completadas de 150 epocas |
+| `configs/training/agave_maleza_2026-10-21/` | Propuesta anterior de 11 configuraciones |
+| `configs/training/historico_2026-05_06/` | 10 configuraciones originales, conservadas sin cambios |
+| `configs/datasets/` | Regla reproducible de particion |
+| `configs/tracking/` | BoT-SORT para seguimiento y conteo |
+| `models/pretrained/` | Pesos base YOLO26n y YOLO26s |
+| `runs/` | Corridas y checkpoints; los historicos conservan sus rutas |
+| `benchmark/` | CSV historico y nueva serie por separado |
+| `docs/reportes/` | Reportes Word anteriores |
+| `docs/paper/` | Articulo, PDF, fuentes y referencias |
+| `docs/evidencia/` | Analisis, estadisticas y figuras del dataset anterior |
+| `docs/results/` | Figuras de reportes anteriores |
+| `scripts/` | Preparacion de datos, entrenamiento, reportes y conteo |
+| `src/` | Analisis reproducibles del estudio historico |
+| `video_predictions/` | Videos y conteos historicos |
+| `backups/reorganizacion_2026-10-21/` | Copia previa de documentos/codigo y registro verificado de movimientos |
 
-Resumen de esa corrida:
+Los scripts de reportes y `src/` siguen analizando el estudio historico; no deben usarse para presentar resultados del dataset nuevo hasta tener corridas y actualizar el analisis.
 
-- Modelo base: `yolo26s.pt`
-- Optimizador: `SGD`
-- Learning rate inicial: `0.005`
-- Cosine LR: `true`
-- Epocas configuradas: `120`
-- Early stopping/patience: `30`
-- Batch: `8`
-- Mosaic: `0.0`
-- Rotacion: `0`
-- Translacion: `0.0`
-- Flip vertical: `0.5`
-- Flip horizontal: `0.5`
+El [archivo historico](docs/HISTORICO_BENCHMARK.md) conserva el benchmark completo, las instrucciones de tracking, los avances del articulo y las metricas previas. El mejor modelo anterior permanece en `runs/detect/agave_experiments/yolo26s_sgd_cos_slow_120e/weights/best.pt`.
 
-## Estructura Versionada
+## Entorno y archivos locales
 
-```text
-benchmark/
-docs/results/
-scripts/
-tracking_configs/
-training_configs/
-datasets/yolo26/data.yaml
-Pipfile
-Pipfile.lock
-README.md
-.gitignore
-```
+Python 3.12; versiones del entrenamiento fijadas en `Pipfile.lock`: Ultralytics 8.4.57, PyTorch 2.10.0+cu128 y torchvision 0.25.0+cu128. No se reinstalo el entorno. Se conservan Git, los cambios locales anteriores y los resultados existentes.
 
-## Notas de Versionamiento
-
-No se suben a Git:
-
-- `.venv/`
-- `datasets/**/images/`
-- `datasets/**/labels/`
-- `runs/`
-- `video_predictions/`
-- pesos `*.pt`
-- videos generados
-
-Esto mantiene el repo ligero y evita subir archivos grandes al remoto por accidente.
+Imagenes, etiquetas, ZIP, pesos, videos, corridas y respaldos quedan fuera de Git mediante `.gitignore`. Las tablas y figuras seleccionadas se conservan en `docs/resultados/` para su consulta desde la computadora de redacción.
